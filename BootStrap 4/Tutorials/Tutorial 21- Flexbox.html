@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Flexbox | Bootstrap 4</title>
+  <!-- style ট্যাগের ভিতরে ক্লাস ডিজাইন করা আছে , এই ক্লাস ডিজাইন ইউজ করা হবে  -->
+  <style>
+    .row-h1{
+      background:#f4f4f4;
+      height:250px;
+    }
+
+    .item-h1{
+      border:1px solid #333;
+    }
+  </style>
+</head>
+<body>
+    <h1 class="display-3 text-center my-4">Flexbox</h1>
+	  <div class="container">
+    <!--########################START HERE#########################-->
+
+    <!-- FLEX ROW & FLEX ITEMS -->
+    <div class= "d-flex row-h1 flex-row"><!-- style ট্যাগের ভিতর থেকে row-h1 ক্লাসটা ইউজ করলাম, তাতে একটা background আসলো , এবং বর্ডার হাইট ২৫০ পিক্সেল হয়ে গেল, d-flex ক্লাস ইউজ করলে আগে সব div আইটেম রো আকারে ( vertically) শো করত , এখন কলাম (horizontaly) দেখাবে  || বাই- ডিফল্ট div আইটেমগুলো লেফটে align থাকে,  flex-row সেটাই ডিফাইন করে।    -->
+      <div class = "p-4 item-h1">Flex Item</div><!-- এখন আমরা item-h1 ক্লাস ইউজ করেছি, যেটা প্রত্যেক div এর চারপাশে ১পিক্সেল বর্ডার করে দিবে  -->
+      <div class= "p-4 item-h1">Flex Item</div> <!-- p = padding -->
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+    <!-- FLEX ROW REVERSE -->
+    <div class= "d-flex row-h1 flex-row-reverse"> <!-- যেহেতু flex-row-reverse ক্লাস ইউজ করেছি, সেহেতু সব div আইটেম ডানে শো করবে  -->
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+    <!-- JUSTIFY CONTENT -->
+	<!-- কন্টেন্টকে শুরুতে দেখানো, এর জন্য  justify-content-start এই ক্লাস ইউজ করা  হয়  -->
+	<h3>Justify Content </h3>
+    <div class= "d-flex row-h1 flex-row justify-content-start"> 
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= " p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+	<!-- কন্টেন্টকে মাঝে দেখানো , ক্লাস = justify-content-center -->
+    <div class= "d-flex row-h1 flex-row justify-content-center"> 
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+	
+	<!-- কন্টেন্টকে শেষে দেখানো , ক্লাস = justify-content-end -->
+    <div class= "d-flex row-h1 flex-row justify-content-end"> 
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+	
+	<!-- কন্টেন্টকে চারপাশে দেখানো , মানে বামে যে পরিমাণ জায়গা খালি, ডানেও সেই পরিমাণ জায়গা খালি   ক্লাস = justify-content-around,  -->
+    <div class= "d-flex row-h1 flex-row justify-content-around"> 
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+    <!-- কন্টেন্টকে প্রথমে ও শেষে  দেখানো ,  ক্লাস = justify-content-between,  -->
+	<h3>content between </h3>
+    <div class= "d-flex row-h1 flex-row justify-content-between"> 
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+	
+	<!-- উপরে আমরা রো নিয়ে কাজ করেছি, এখন আমরা কলাম নিয়ে কাজ করব  -->
+    <!-- FLEX CONTAINER / FLEX COLUMN -->
+    
+	<div class= "d-flex row-h1 flex-column"> <!-- flex-column হলে সব কন্টেন্ট row আকারে শো করবে , এবং টপে থাকবে, নিচে কিছু জায়গা খালি থাকতে পারে  -->
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+    <div class= "d-flex row-h1 flex-column-reverse"> <!-- flex-column-reverse হলে সব কন্টেন্ট row আকারে শো করবে , এবং বটমে  থাকবে, উপরে  কিছু জায়গা খালি থাকতে পারে  -->
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+	
+	<!-- এবার আমরা কলাম গুলোকে horizontally শো করাব এবং justify-content ইউজ করব  -->
+	
+    <div class= "d-flex row-h1 flex-column justify-content-start"> <!-- কন্টেন্ট শুরুতে থাকবে -->
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+    <div class= "d-flex row-h1 flex-column justify-content-center"> <!-- কন্টেন্ট মাঝে  থাকবে , উপরে এবং নিচে ফাকা জায়গা থাকবে -->
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+    <div class= "d-flex row-h1 flex-column justify-content-around"> 
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+	<h3> between </h3>
+    <div class= "d-flex row-h1 flex-column justify-content-between"> 
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+    <div class= "d-flex row-h1 flex-column justify-content-start"> 
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class= "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+	
+    <!-- VERTICAL ALIGN ITEMS -->
+    <!-- এখন আমরা এলাইন আইটেম নামে আরেকটি ক্লাস ইউজ করব , এই ক্লাস উপর থেকে কিছু অংশ দখল করবে, এইসব ক্লাস না ইউজ করলে div আইটেমগুলো  vertically পুরো জায়গাটুকু দখল করত -->
+	<h3>align-items-start </h3>
+	<div class="d-flex row-h1 flex-row align-items-start">
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+	
+	<h3>align-items-center </h3>
+	<div class="d-flex row-h1 flex-row align-items-center">
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+    </div>
+	<br> <br>
+	
+	<h3>align-items-end </h3>
+	<div class="d-flex row-h1 flex-row align-items-end">
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+    </div>
+	<br> <br>
+	
+	
+	<h3>align-items-baseline </h3>
+	<div class="d-flex row-h1 flex-row align-items-baseline">
+	<!-- baseline ক্লাস ইউজ করলে উপরে শো করে -->
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+    </div>
+	<br> <br>
+	
+	<h3>align-items-stretch </h3>
+	<!-- stretch ক্লাস ইউজ করলে ডিফল্ট ভ্যালু চলে আসে, যেটা align-items ক্লাস ইউজ না করলে আসত -->
+	<div class="d-flex row-h1 flex-row align-items-stretch">
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+      <div class="p-4 item-h1">Flex Item</div>
+    </div>
+	<br> <br>
+	
+    <!-- RESPONSIVE VERTICAL ALIGN -->
+	<!--vertical এলাইনগুলো এখন আমরা বিভিন্ন সাইজের ডিভাইসের জন্য দেখাবো  -->
+	<h3>RESPONSIVE vertical align </h3>
+    <div class="d-flex row-h1 flex-row align-items-center align-items-sm-start align-items-md-end">
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+      <div class = "p-4 item-h1">Flex Item</div>
+    </div>
+
+    <br><br>
+
+    <!-- ALIGN SELF -->
+	<!-- div এর প্রত্যেকটা div কে এলাইন করা , প্রত্যেকটা ভিন্ন ভিন্ন ভাবে -->
+	<!-- align items এ সবগুলা একসাথে চেঞ্জ হবে, আর align self এ একটা একটা করে চেঞ্জ করতে হবে  -->
+	
+	<h3>Align self </h3>
+    <div class = "d-flex row-h1 flex-row">
+      <div class = "p-4 item-h1 align-self-start">Flex Item</div> <!-- individually প্রত্যেকটায় self ইউজ করতে হবে  -->
+      <div class = "p-4 item-h1 align-self-center">Flex Item</div>
+      <div class = "p-4 item-h1 align-self-end">Flex Item</div>
+      <div class = "p-4 item-h1 align-self-baseline">Flex Item</div>
+      <div class = "p-4 item-h1 align-self-strectch">Flex Item</div>
+    </div>
+
+    <br><br>
+
+    <!-- RESPONSIVE ALIGN SELF -->
+    <h3>Responsive Align self </h3>
+    <div class = "d-flex row-h1 flex-row">
+      <div class = "p-4 item-h1 align-self-start align-self-sm-start">Flex Item</div> 
+      <div class = "p-4 item-h1 align-self-center align-self-sm-start">Flex Item</div>
+      <div class = "p-4 item-h1 align-self-end align-self-sm-start">Flex Item</div>
+      <div class = "p-4 item-h1 align-self-baseline align-self-sm-start">Flex Item</div>
+      <div class = "p-4 item-h1 align-self-strectch align-self-sm-start">Flex Item</div>
+    </div> <!-- row div -->
+
+  </div><!--container -->
+
+  <div style="margin-top:500px;"></div>
+
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

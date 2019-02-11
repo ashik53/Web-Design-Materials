@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Tooltips | Bootstrap 4</title>
+</head>
+<body>
+  <h1 class="display-3 text-center my-4">Tooltips</h1>
+  <div class="container">
+    <!--########################START HERE#########################-->
+	
+		<!--Tooltips  -->
+		<!-- title এর মদ্ধেই tooltip লেখাটা থাকবে  -->
+		<!-- tooltip উপরে শো করানোর জন্য আমাদের তিনটা  কাজ করতে হবে, বাটনের মধ্যে data-placement = "top" ( যেখানে data রাখব) , data-toggle ="tooltip" আর এর একটা জাভাস্ক্রিপ্ট ফাংশন লাগবে  -->
+		<!-- এইভাবে দেখালে tooltip টা একটু সুন্দর করে দেখাবে  -->
+		<button class = "btn btn-primary"data-placement="top" data-toggle ="tooltip" title = "Hello world" >Tooltip on top </button>
+		
+		<!-- বাকি তিনটা বাটনের tooltip কে যথাক্রমে left, right এবং bottom এ শো করা  -->
+		<button class = "btn btn-primary"data-placement="left" data-toggle ="tooltip" title = "Hello world" >Tooltip on left </button>
+		
+		<button class = "btn btn-primary"data-placement="right" data-toggle ="tooltip" title = "Hello world" >Tooltip on right </button>
+		
+		<button class = "btn btn-primary"data-placement="bottom" data-toggle ="tooltip" title = "Hello world" >Tooltip on bottom </button>
+		<br> <br>
+		
+		<!-- TOOLTIPS WITH HTML -->
+		<!-- tooltip এর লেখাটাকে html দ্বারা ডিজাইন করা  এর জন্য title এর মধ্যে html ট্যাগ ডিজাইন কর এবং বাটন ক্লাসে একটা অতিরিক্ত ইনফো রাখো data-html = "true"-->
+		<button class = "btn btn-success"data-html = "true" data-placement="top" data-toggle ="tooltip" title = "<h3>Hello world</h3><p>This is a paragraph. </p>" >Tooltip on top </button>
+		
+		<br>
+		<hr>
+		
+		<!-- TRIGGER WITH JS -->
+		<!-- এখন আমরা একটা বাটনে ক্লিক করলে যাতে অন্য বাটনে tooltip শো করে সেটা দেখাবো , এর জন্য দুইটা বাটন লাগবে।   ২য় বাটনে ক্লিক হবে এবং ১ম বাটনে tooltip শো হবে -->
+		
+		<!-- ১ম বাটনে একটা id থাকবে, সেটা ফাংশন দিয়ে জাভাস্ক্রিপ্টের মধ্যে কল হবে  -->
+		<button id = "hello" class = "btn btn-success" data-html="true" data-placement="top" data-toggle ="tooltip" title="Tooltip on top"> Tooltip on top </button>
+		
+		<br> <br>
+		
+		<button class = "btn btn-secondary" onClick="showToolTip()"> show tooltip</button> <!-- onClick() ফাংশন দিয়েই  JS এ ফাংশন কল করবে -->
+		
+		<!-- এই বাটন দিয়ে আগের বাটন দ্বারা তৈরি হওয়া tooltip হাইড হয়ে যাবে  -->
+		<button class = "btn btn-warning" onClick="hideToolTip()"> Hide tooltip </button>
+        <!-- hide, show দুইটা একসাথে করার জন্য একটি বাটন তৈরি করব , তবে সেটা toogle নামে তৈরি হবে , কারণ toggle, এলিমেনট এ ক্লিক করলে আসে আবার ক্লিক করলে চলে যায় -->
+		<button class = "btn btn-danger" onClick="toggleToolTip()"> Toggle tooltip </button> <!-- এটা toggle ধরণের কাজ করবে তাই এর নাম toggle  -->
+		
+    </div> <!-- container-->
+
+  <div style="margin-top:500px;"></div>
+
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  <!-- 2য় বাটনে ক্লিক করে ১ম বাটনে tooltip দেখানোর ফাংশন  এবং ৩য় বাটনে ক্লিক করে ১ম বাটনের সেই tooltip হাইড করার ফাংশন -->
+ 
+  
+  <!-- 1st = data-toogle,  attibute  নিয়ে কাজ করছি তাই এখানে আমি জাভাস্ক্রিপ্টের মধ্যে data-toggle কেই কল করব -->
+  <!-- 2nd = 2য় বাটনে ক্লিক করে ১ম বাটনে tooltip দেখানোর ফাংশন  -->
+  <!-- 3rd = 3য় বাটনে ক্লিক করে ১ম বাটনে tooltip হাইড করার ফাংশন  -->
+  <!-- 4th = 4th বাটনে ক্লিক করে ১ম বাটনে tooltip দেখানো, এবং আবার 4th বাটনে ক্লিক করে ১ম বাটনে tooltip hide করা -->
+  <script>
+	$('[data-toggle="tooltip"]').tooltip();
+	
+	function showToolTip(){
+		$('#hello').tooltip('show');
+	}
+	
+	function hideToolTip(){
+		$('#hello').tooltip('hide');
+	}
+	
+	function toggleToolTip(){
+		$('#hello').tooltip('toggle');
+	}
+	
+  </script>
+  
+  
+</body>
+</html>

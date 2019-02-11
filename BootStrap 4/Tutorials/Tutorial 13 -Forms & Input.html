@@ -1,0 +1,135 @@
+<!-- Nav and Navbar-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- font awesome cdn লিংক করানো -->
+
+	<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <title>Tutorial-13 Forms </title>
+</head>
+<body>
+	<h1 class="display-3 text-center my-4">Forms</h1>
+      <div class="container">
+        <!--########################START HERE#########################-->
+
+        <!-- FORM -->
+        <form>
+            <div class = "form-group"> <!--form-group ইউজ করলে  পুরো ট্যাগের বাইরে মার্জিন থাকবে  -->
+                <label for="name">Name </label>
+                <input class = "form-control"type="text" id="name" placeholder="Enter name"> <!--form-control ইউজ করলে ইনপুট বক্সটা নিউলাইন প্রিন্ট করে এবং একটা সুন্দর ফরম্যাটে আসে , form-control-sm ইনপুট বক্সটাকে ছোট করে ফেলে , lg = ইনপুট বক্স বড় হয়ে গেছে   -->
+            </div>
+            <div class = "form-group">
+                <label for="email">Email address</label>
+                <input class = "form-control"type="email" id="email" placeholder="Enter email">
+                <small class = "form-text text-muted">Your email will not be shared with anyone</small> <!-- form-text মার্জিন কমিয়ে দেয় , text-muted লেখাকে লাইট করে দেয়  -->
+            </div>
+            <div class = "form-group">
+                <label for="password">Password</label>
+                <input class = "form-control"type="password" id="password" placeholder="Password" readonly > <!-- read only , attribute ইউজ করলে ইনপুট ফিল্ডে কিছু লেখা যাবে না -->
+            </div>
+            <div class = "form-group">
+                <label for="gender">Gender</label>
+                <select class = "form-control" id="gender">
+        					<option>Male</option>
+        					<option>Female</option>
+                </select>
+            </div>
+            <div class = "form-group">
+                <label for="message">Message</label>
+                <textarea class = "form-control" id="message" rows="5"></textarea> <!-- row এর মান যত হয়  text-area তত deep হবে   -->
+            </div>
+
+			<!-- ফাইল আপলোড করার সিস্টেম  -->
+
+            <div class = "form-group">
+                <label for="file">File input</label>
+                <input class = "form-control-file" type="file" id="file"> <!-- form-control এর শেষে file লাগালে ফিল্ডের চারপাশে যে বক্স আছে সেটা চলে যাবে -->
+                <small class = "form-text text-muted" id="fileHelp">Max 3mb size</small> <!-- লেখাটা ছোট করে ফেললাম  -->
+            </div>
+
+            <fieldset class = "form-group">
+                <legend>What are you using this service for?</legend>
+
+				<!-- সম্ভবত রেডিও বাটন, চেকবক্সের কাজে form-check এই ক্লাসটা ইউজ করা হয়  -->
+
+                <div class = "form-check">
+					<label class = "form-check-label"> <!-- form-check-label + form-check-input নিচের এলিমেনট থেকে মার্জিন কমায় , মানে নিচে কোন এলিমেনট থাকলে তাঁকে কাছে আনে এবং বামে সরিয়ে আনে   -->
+						<input class = "form-check-input" type="radio" value="option1" checked>
+						Personal
+					</label>
+                </div>
+                <div class="form-check">
+					<label class = "form-check-label">
+						<input class = "form-check-input" type="radio" value="option2" checked>
+						Commercial Use
+					</label>
+                </div>
+
+                <div class = "form-check">
+					<label class = "form-check-label">
+						<input class = "form-check-input" type="radio" value="option3" disabled>
+					   Testing
+					</label>
+                </div>
+            </fieldset>
+
+			<div class= "form-check">
+                <label class = "form-check-label">
+                <input class = "form-check-input" type="checkbox">
+                    Sign up for newsletter
+                </label>
+            </div>
+            <button class = "btn btn-primary mt-1"type="submit">Submit</button>
+        </form>
+
+        <br><br>
+
+        <!-- INLINE FORM -->
+        <form class = "form-inline"> <!-- form-inline সব form, element কে সেম লাইনে দেখাবে  -->
+            <input class = "form-control mr-2"type="text" id="username" placeholder="Enter username"> <!-- mr = margin right-->
+            <input class = "form-control mr-2" type="text" id="password" placeholder="Password">
+            <div class = "form-check">
+                <label class = "form-check-label mr-2">
+                    <input class = "form-check-input" type="checkbox"> Remember me
+                </label>
+            </div>
+
+            <button class = "btn btn-warning" type="submit">Submit</button>
+        </form>
+
+        <br><br>
+
+        <!-- VALIDATION -->
+		<!-- ইনপুট বক্সে কিছু দিলে সেটার ইনিশিয়াল ভ্যালিডেশন জাভাস্ক্রিপ্ট দিয়ে করতে হয়, সেটা আমরা পরে করব , এখন শুধু সেটআপটা  দিয়ে রাখি  -->
+
+        <div class = "form-group">
+            <label class = "" for="username">Username</label>
+            <input class = "form-control is-valid" type="text" id="username"> <!-- input class = "is-valid" + div class = "valid-feedback" ইউজ করলে  div টা শো করানো যাবে , তখন ইনপুট ফিল্ড এবং warn করা লেখাটায় একটা green একটা কালার দেখাবে -->
+            <div class = "valid-feedback">Username available</div> <!-- class = "valid-feedback"  ক্লাস ইউজ করলে লেখাটা চলে যাবে , এবং এই div টা invalid হয়ে যাবে , এটা শুধুমাত্র তখনি জাভাস্ক্রিপ্ট ফাংশন ইউজ করে শো করানো যাবে যখন username টা available থাকবে -->
+            <small>Must be at least 8 characters</small>
+        </div>
+
+		<!-- ইনভ্যালিড পাসওয়ার্ড এই সেটআপ করা  -->
+
+        <div class = "form-group">
+            <label for="password">Password</label>
+            <input class = "form-control is-invalid" type="text" id="password">
+            <div class = "invalid-feedback">That password is not safe</div>
+            <small>Please use a strong password</small>
+        </div>
+
+    </div><!-- ./container -->
+
+
+	<!--এখানে যে সিকোয়েন্সে <script> ট্যাগ গুলা আছে সেইভাবেই দিতে হবে  -->
+    <div style="margin-top:500px;"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3m IykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

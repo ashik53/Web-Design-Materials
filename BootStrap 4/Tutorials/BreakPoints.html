@@ -1,0 +1,51 @@
+
+<!-- sizing means margin and padding-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	  <title>Bootstrap 4</title>
+    <style>
+    /* আগে min গুলা নিতে হবে, সবচেয়ে ছোট min সবার পরে
+      cntrl+shift+m for firefox */
+      @media (min-width: 1000px){
+        body{
+          background: red;
+        }
+      }
+      @media (min-width: 700px){
+        body{
+          background: purple;
+        }
+      }
+      @media (min-width: 500px){
+        body{
+          background: orange;
+        }
+      }
+       /*small devices */
+       @media (max-width: 499px){
+         body{
+           background: black;
+         }
+       }
+       /* */
+
+       /* */
+    </style>
+</head>
+<body>
+  <h1 class="display-3 text-center my-4">Breakpoints</h1>
+
+
+    <!--এখানে যে সিকোয়েন্সে <script> ট্যাগ গুলা আছে সেইভাবেই দিতে হবে  -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

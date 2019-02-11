@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Modals | Bootstrap 4</title>
+</head>
+<body>
+  <h1 class="display-3 text-center my-4">Modals</h1>
+  <div class="container">
+    <!--########################START HERE#########################-->
+
+    <!-- MODAL TRIGGER -->
+    <!-- modal হল একটা pop-up window যেটা বাটন ক্লিক করার সাথে সাথে active হয়,এবং কারেন্ট পেজটা ডার্ক শেডে থাকে |  এটার হেডার, বডি, ফুটার আছে । modal এ ক্লোজ বাটন তৈরি করা যায়  -->
+	<!--এখন আমরা modal তৈরি করব  -->
+	<!-- ১মে modal এর একটা বাটন তৈরি করব  -->
+	
+	<button class ="btn btn-success" type ="button" data-toggle ="modal" data-target="#myModal"> Launch modal button</button> <!-- যেহেতু modal নিয়ে কাজ করতেছি তাই data-toggle এর value modal , এই modal এ ক্লিক করলে অন্য একটা জায়গায় গিয়ে execute হবে , তাই এইখানে একটা আইডি রাখা লাগবে  -->
+	
+    <!-- LOGIN MODAL TRIGGER -->
+    <div class = "modal" id ="myModal"> <!-- modal এর ১ম অংশ   --> 
+		<div class ="modal-dialog modal-md"><!-- modal-md, modal-sm, modal-lg দ্বারা modal এর সাইজ চেঞ্জ করা যায়  --> <!-- modal-dialogue =  modal এর ডায়ালগ বক্স  -->
+				<div class ="modal-content"> <!-- এটা  modal-content-->
+				<!-- header টা এখানে শুরু  --><div class ="modal-header">
+					<h5 class ="modal-title"> Modal title</h5> <!-- এই h5 এর ডানপাশে একটা ক্রস বাটন থাকবে যেটা modal কে ফেলে দিবে, এর জন্য একটা বাটন ট্যাগ নিতে হবে   -->
+					<button class ="close" data-dismiss ="modal"> &times; 
+					<!-- close ক্লাস ক্লোজ বাটন বানায় এবং এর প্রোপার্টি data-dismiss দ্বারা ডিফাইন করে  । যেহেতু আমরা modal নিয়ে কাজ করছি  সেহেতু data-dismiss এর টাইপ হবে modal, data-dismiss দ্বারা বাটনটা কাজ করি  -->
+					<!-- বাটনের নাম &times; দিলে ক্লোজ আইকনটা শো করে , না দিলে কাজ করবে , কিন্তু বাটনটা হাইড হয়ে যাবে -->
+					</button>
+				</div> <!-- header -->
+				
+				<!-- এখন আমরা modal body নিয়ে কাজ করব  -->
+			    <div class = "modal-body">
+					With HTML you can create your own Website. This tutorial teaches you everything about HTML. HTML is easy to learn - You will enjoy it.
+					<!-- modal এর footer নিয়ে কাজ করবো  -->
+					<div class = "modal-footer"> <!-- modal-footer দ্বারা modal footer ক্লাস কল করা হয়  -->
+					
+						<!-- ফুটারে আমরা ক্লোজ বাটনটা রাখব  -->
+						<button class ="btn btn-secondary"  data-dismiss="modal">Close </button>
+					</div> <!--modal-footer -->
+				
+				</div> <!-- modal body -->
+			</div> <!-- modal-content -->
+		</div> <!-- modal-dialogue -->
+	</div> <!-- modal -->
+	<br> <br>
+	
+    <!-- LOGIN MODAL -->
+    <!-- একটা বাটনে ক্লিক করলে log in window আসবে , সেইরকম একটা window তৈরি করবো-->
+	<!-- এখানে modal body এর মধ্যে একটা login form তৈরি করবো , footer এর  মধ্যে ডানসাইডে দুইটা বাটন থাকে , ১মটা লগিন এবং ২য়টা ক্লোজ বাটন -->
+	
+	<!-- যে বাটনে ক্লিক করা হবে -->
+	<button class = "btn btn-success" data-toggle ="modal" data-target ="#loginModal"> Login Window</button>
+	<!-- যে div এরিয়াতে modal থাকবে -->
+	<div class = "modal" id ="loginModal">
+	  <div class = "modal-dialog modal-lg">
+		<div class = "modal-content">
+		  <div class = "modal-header">
+			<h5 class = "modal-title">User Login</h5>
+			<button class = "close" data-dismisss="modal">&times;</button>
+		  </div> <!-- modal header-->
+			<!-- এইবার modal-body বানাবো, যেখানে আমি একটা login window বানাবো -->
+			
+			<div class = "modal-body">
+				<form>
+					<!-- username -->
+					<div class = "form-group">
+						<label for = "username">Username</label>
+						<input class = "form-control" type="text" placeholder="Username">
+					</div>
+					<!-- password -->
+					<div class = "form-group">
+						<label for = "password">Password</label>
+						<input class = "form-control" type="password" placeholder="Password">
+					</div>
+				</form>
+			</div> <!-- div = modal-body -->
+			
+			<!-- এবার footer নিয়ে কাজ করবো  -->
+			<div class = "modal-footer">
+			  <button class = "btn btn-secondary" data-dismiss="modal" > <!-- ক্লোজ বাটন  -->
+			  Close</button>
+			  <button class = "btn btn-warning"> <!-- Login button --> Login
+			  </button>
+			</div> <!-- modal-footer -->
+			
+		</div> <!-- modal-content -->
+	  </div> <!--modal-dialog -->
+	
+	</div> <!--modal -->
+	
+  </div> <!-- container --> 
+
+  <div style="margin-top:500px;"></div>
+
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!-- Nav and Navbar-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	
+	<!-- font awesome cdn লিংক করানো -->
+	
+	<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	  <title>T-12 </title>
+</head> 
+<body>
+  
+		<div class ="container"> <h1>List groups & Badges </h1> </div>
+	    
+		<div class = "container">
+		  <!-- List group -->
+		  
+		  <ul class = "list-group"> 
+			<!-- বাই ডিফল্ট লিস্টের প্রত্যেকটি আইটেমের নিজস্ব মার্জিন, প্যাঁডিং থাকে ,ul class = "list-group" এই ক্লাসটি সব দিক হতে margin, padding সরিয়ে দেয়  -->
+			
+			     <!-- class = "list-group-item" সব li ট্যাগগুলোকে একটা বক্সের মধ্যে সাজিয়ে দেখায়, group class টা ইউজ করা হয়েছে, তাই সবগুলা এলিমেনট  একসাথে দেখাবে-->
+				<li class = "list-group-item" > My list Item One </li>
+				<li class = "list-group-item"> My list Item Two </li>
+				<li class = "list-group-item"> My list Item Three </li>
+				<li class = "list-group-item"> My list Item Four </li>
+				<li class = "list-group-item"> My list Item Five </li>
+				
+		  </ul>
+			
+		  <br> <br>
+			
+		  <!-- লিংক ট্যাগগুলো লিস্ট ট্যাগের মধ্যে ইউজ করে  সেগুলো গ্রুপ করা   -->
+			
+		  <ul class = "list-group"> 
+			<!--   -->
+			
+			    <!-- list-group-item এবং  list-group-item-action এই দুটো ক্লাস একসাথে লিখলে তারপর প্রত্যেক বক্সের মধ্যে মাউস রাখলে একটু ডার্ক কালার শো করবে   -->
+				<a class = "list-group-item list-group-item-action active" href="#" > My list Item One </li>
+				<a class = "list-group-item list-group-item-action" href="#"> My list Item Two </a>
+				<a class = "list-group-item list-group-item-action" href="#"> My list Item Three </a>
+				<a class = "list-group-item list-group-item-action" href="#"> My list Item Four </a>
+				<a class = "list-group-item list-group-item-action" href="#"> My list Item Five </a>
+				
+		  </ul>
+			
+		  <br> <br> 
+		  
+		  <ul class = "list-group"> 
+			
+				<!-- list-group-item-action এবং  list-group-item-primary এই দুটো ক্লাস ইউস করে কালার চেঞ্জ করলাম -->
+			
+				<li class = "list-group-item list-group-item-action list-group-item-primary" > My list Item One </li>
+				<li class = "list-group-item list-group-item-action list-group-item-danger"> My list Item Two </li>
+				<li class = "list-group-item list-group-item-action list-group-item-warning"> My list Item Three </li>
+				<li class = "list-group-item list-group-item-action list-group-item-info"> My list Item Four </li>
+				<li class = "list-group-item list-group-item-action list-group-item-success"> My list Item Five </li>
+				
+		  </ul>
+		  
+		  <br> <br> 
+		  
+		  <!-- Badges  -->
+		  
+		  <ul class = "list-group"> 
+			
+				<li class = "list-group-item" > My list Item One </li>
+				<li class = "list-group-item"> My list Item Two </li>
+				<li class = "list-group-item"> My list Item Three  <span class = "badge badge-primary align-top ">  43 </span> </li> <!-- badge ক্লাসটা লেখাকে  Three থেকে একটু সরিয়ে ছোট এবং একটু বোল্ড করে লিখবে , badge-primary = ব্যাকগ্রাউনড  কালার ,primary এর পরিবর্তে অন্য কালার ইউজ কর ; align-top এই ক্লাস ব্যাজকে টপে বসাবে -->
+				<li class = "list-group-item"> My list Item Four </li>
+				<li class = "list-group-item"> My list Item Five </li>
+				
+		  </ul>
+		  <br> <br> 
+			
+		  <!--পোস্ট টাইপ কন্টেন্টকে লিস্ট ক্লাস দ্বারা মডিফাই করা -->
+			
+		  <div class ="list-group">
+				
+				<!-- সব a ট্যাগের ভিতরে তাই যেকোনো একটার উপরে ক্লিক করলে  সবগুলাই সিলেক্টেড দেখাবে  -->
+				
+				<a  class = "list-group-item list-group-item-action" href = "#">
+					<div class = "d-flex"> <!-- d-flex ক্লাস ইউজ করলে div এর ভিতরে যত  ট্যাগ থাকে তা কলাম আকারে  শো করে -->
+						<h5>My post onended </h5>
+						<small class = "mx-1">3 days ago</small>
+					</div>
+					<p class = "mb-1"> This is a cat. This is a cat. This is a cat. </p>
+					<small>By Ashik </small>
+				</a>
+				
+				<a class = "list-group-item list-group-item-action"href = "#">
+					<div>
+						<h5>My post onended </h5>
+						<small>3 days ago</small>
+					</div>
+					<p> This is a cat. This is a cat. This is a cat. </p>
+					<small>By Ashik </small>
+				</a>
+				
+				<a class = "list-group-item list-group-item-action" href = "#">
+					<div>
+						<h5>My post onended </h5>
+						<small>3 days ago</small>
+					</div>
+					<p> This is a cat. This is a cat. This is a cat. </p>
+					<small>By Ashik </small>
+				</a>
+				
+				
+		  </div> <!-- class = list-group -->
+		  
+		  <br> <br> 
+		  
+		  <!-- Breadcrumb
+			অনেক সময় দেখা যায় , ওয়েবসাইটে লিঙ্কের পাথ ডিরেকশন দেয়া থাকে , যেমন   Home / Menu / Profile ইত্যাদি 
+			এইটা Breadcrumb দিয়ে বানানো যায় 
+		  -->
+		  
+		  <h2> Bread crumb (path direction to website) </h2>
+		  <br>
+		  
+		  <ol class = "breadcrumb">
+			<li class = "breadcrumb-item active">Home</li>
+		  </ol>
+		  
+		  <ol class = "breadcrumb">
+		  
+			<!-- ol এর মধ্যে breadcrumb এবং li এর মধ্যে breadcrumb-item ইত্যাদি ইউজ করলে Link1 / Link2 / Link3 / ... এই ফরম্যাটে  আসবে -->
+		    
+			<li class = "breadcrumb-item"> Home </li>
+			<li class = "breadcrumb-item active" > Users </li>
+		  </ol>
+		  
+		  <ol class = "breadcrumb">
+			<li class = "breadcrumb-item"> Home </li>
+			<li class = "breadcrumb-item" > Users </li>
+			<li class = "breadcrumb-item"> Ashik </li>
+		  </ol>
+		  
+		  
+		
+		  
+	   </div> <!-- div container  -->
+			
+	
+		
+	<!--এখানে যে সিকোয়েন্সে <script> ট্যাগ গুলা আছে সেইভাবেই দিতে হবে  -->
+    <div style="margin-top:500px;"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3m IykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

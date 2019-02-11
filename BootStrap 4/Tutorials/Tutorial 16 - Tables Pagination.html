@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+ <!-- নিচের লিংকটা ব্রাউজারের ট্যাবে ডানপাশে লোগো দেখানোর জন্য   -->
+  <link rel= "shortcut icon" type ="image/x-icon" href ="img/favicon1.png">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/navbar-fixed.css"> <!-- navbar থেকে কোন সেকশনকে smoothly কল করার css লিংক  -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>LoopLAB</title>
+</head>
+<body>
+
+  <h1 class="display-4 text-center my-4">Tables & Pagination</h1>
+      <div class="container">
+        <!--########################START HERE#########################-->
+
+        <!-- TABLE -->
+        <h3>Simple table </h3>
+        <table class="table"> <!--table ট্যাগ ইউজ করলে টেবিলটা সুন্দরভাবে দেখাবে  -->
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th >1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jdoe@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Will</td>
+                    <td>Johnson</td>
+                    <td>will@yahoo.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Shannon</td>
+                    <td>Williams</td>
+                    <td>shannon@yahoo.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3> INVERSE TABLE </h3>
+        <table class ="table table-success" > <!-- table-dark টেবিলের background ডার্ক করে দেয়, এবং ফন্টের কালার লাইট করে দেয় ; আরও কালার আছে যেমন(warning, success)-->
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jdoe@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Will</td>
+                    <td>Johnson</td>
+                    <td>will@yahoo.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Shannon</td>
+                    <td>Williams</td>
+                    <td>shannon@yahoo.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- TABLE HEAD INVERSE -->
+        <h3>TABLE HEAD INVERSE</h3>
+        <table class="table">
+            <thead class="table-dark"> <!-- হেডিং এর কালার চেঞ্জ হয়ে গিয়েছে -->
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jdoe@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Will</td>
+                    <td>Johnson</td>
+                    <td>will@yahoo.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Shannon</td>
+                    <td>Williams</td>
+                    <td>shannon@yahoo.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3> STRIPED TABLE </h3>
+        <table class="table table-striped"> <!--একটা রো সাদা, আরেকটা গ্রে কালারের শো করবে -->
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jdoe@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Will</td>
+                    <td>Johnson</td>
+                    <td>will@yahoo.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Shannon</td>
+                    <td>Williams</td>
+                    <td>shannon@yahoo.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- BORDERED TABLE -->
+        <table class="">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jdoe@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Will</td>
+                    <td>Johnson</td>
+                    <td>will@yahoo.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Shannon</td>
+                    <td>Williams</td>
+                    <td>shannon@yahoo.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HOVERABLE -->
+        <!-- TABLE -->
+        <table class="">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jdoe@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Will</td>
+                    <td>Johnson</td>
+                    <td>will@yahoo.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Shannon</td>
+                    <td>Williams</td>
+                    <td>shannon@yahoo.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SMALL TABLE -->
+        <table class="">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jdoe@gmail.com</td>
+                </tr>
+                <tr class="">
+                    <th scope="row">2</th>
+                    <td>Will</td>
+                    <td>Johnson</td>
+                    <td>will@yahoo.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Shannon</td>
+                    <td>Williams</td>
+                    <td>shannon@yahoo.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+
+        <!-- PAGINATION -->
+        <nav>
+            <ul class="">
+                <li class=""><a class="" href="#">Previous</a></li>
+                <li class=""><a class="" href="#">1</a></li>
+                <li class=""><a class="" href="#">2</a></li>
+                <li class=""><a class="" href="#">3</a></li>
+                <li class=""><a class="" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+    </div><!-- ./container -->
+    <div style="margin-top:500px;"></div>
+
+
+
+<!-- এই ফরম্যাটেই আমাদেরকে লিংক করতে হবে  -->
+<script src ="js/jquery.min.js"> </script>
+<script src ="js/popper.min.js"> </script>
+<script src ="js/bootstrap.min.js"> </script>
+<script src ="js/navbar-fixed.js"> </script> <!-- navbar থেকে কোন সেকশনকে smoothly কল করার css লিংক  -->
+</body>
+</html>

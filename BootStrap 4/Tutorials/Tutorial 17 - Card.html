@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Card | Bootstrap 4</title>
+</head>
+<body>
+      
+	  <h1 class = "display-3 text-center my-4"> Cards </h1>
+	  
+	  <!--Card এর কাজ সম্ভবত ছোট ছোট বক্স ডিজাইন করা , অনেক সময় ওয়েবসাইটে এইসব লাগে   -->
+
+	  <div class="container">
+        <!--########################START HERE#########################-->
+
+        <!-- BLOCK -->
+        <div class = "card"> <!-- এই div ট্যাগ ইউজ করলে চারদিকে একটা বর্ডার তৈরি হয় (বর্ডার আর লেখার মাঝখানে কোন padding থাকে না   -->
+
+            <div class = "card-body"> <!-- এই ক্লাস ইউজ করলে বক্সের ভিতরে কন্টেন্টের সাথে padding হয়  -->
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptate.
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- SIMPLE CARD -->
+		<h3>Simple Card </h3>
+        <div class = "card">
+            <div class = "card-body">
+                <h4 class = "card-title">Card Title</h4> <!-- title হিসেবে কিছুটা জায়গা নিয়ে নিবে  -->
+                <h6 class = "card-subtitle">Card subtitle</h6> <!-- এই title টা উপরের টাইটেল এর সাথে একটু ঘনিষ্ঠ হবে  -->
+                <p class = "card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p> <!-- এই ক্লাস কোন চেঞ্জ করবে না  -->
+				<!-- নিচের লিঙ্ককে বাটন বানাবো  -->
+                 <a class = "btn btn-primary" href="#">Read More</a>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- CARD WITH IMAGE -->
+		<!-- কার্ডের সাথে একটা ইমেজ রাখি , যেটা কার্ডের সাথে এডজাস্ট হয়ে যাবে -->
+        <div class = "card" style="height: 20%;width:70%"> <!-- card ক্লাস ইউজ করলে ইমেজটা পুরো কার্ডের জায়গা নেবে , তাই  width প্রোপার্টি ইউজ করব -->
+            <img class = "card-img-top" src="http://lorempixel.com/300/300/cats/" alt="Card image cap"> <!-- এই লিংকে থেকে কিছু সময় পর পর ওয়েবসাইটে ইমেজ শো করবে   -->
+            <div class = "card-body">
+                <h4 class = "card-title">Card Title</h4>
+                <p class = "card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+                 <a  class = "btn btn-warning btn-block" href="#">Read More</a>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- CARD WITH HEADER -->
+        <div class = "card">
+            <div class= "card-header bg-success text-light"> <!-- text-light টেক্সটকে সাদা করে -->
+                My Card <!-- এই কন্টেন্ট হেডার হিসেবে ইউজ হবে -->
+            </div>
+            <div class = "card-body">
+                <h4>Card Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur				adipisicing elit. Aut, perspiciatis.</p>
+				
+				<!-- link এর উপরে মাউস পয়েন্টার রাখলে যে আন্ডারলাইন শো করে সেটা বাদ দেবার জন্য  class = "card-link" a ট্যাগের মধ্যে ব্যাবহার করতে হবে   -->
+				
+                <a class = "card-link" href="#">Read More</a>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- HEADER, FOOTER, CENTERED -->
+		
+		<!-- আমরা এখানে হেডার, ফুটার(যেটা নিচে থাকে)  ইত্যাদি   ডিজাইন করব -->
+		
+        <div class= "card text-center">
+            <div class = "card-header bg-success">
+                <h3>My Card</h3>
+            </div>
+            <div class = "card-body">
+                <h4>Card Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, perspiciatis.</p>
+                <a class = "btn btn-info" href="#">Read More</a>
+            </div>
+            <div class = "card-footer text-muted bg-warning"> <!-- text-muted টেক্সটের  কালারকে হালকা করে দেয়  -->
+                2 days ago
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- CARD WITH NAV
+
+		কার্ড তৈরি করব , সাথে একটা নেভিগেশন থাকবে -->
+	
+		
+        <div class = "card">
+            <div class = "card-header">
+                <ul class = "nav nav-tabs card-header-tabs "> 
+				<!-- প্রথম ক্লাসটা একটিভ কিন্তু nav-tabs ক্লাস ইউজ না করলে সেটা শো করবে না। , এই ক্লাস ইউজ করলে লিঙ্কগুলোর নিচে একটা দাগ দেখাবে এবং সেটা বেশ সুন্দর , তারপর card-header-tabs এটা ইউজ করলে সেই দাগটা অদৃশ্য এবং লিঙ্কগুলো  হেডারের বর্ডারের সাথে এডজাস্ট  হয়ে যায় -->
+				<!-- nav ক্লাস ইউজ করলে সব লিংক একসাথে জোড়া লেগে যায় , nav এর লিংকগুলোর নিচে কখনো আন্ডারলাইন শো করে না -->
+					<li class = "nav-item">
+						<a class = "nav-link active " href="#">Active</a>
+					</li>
+					<li class = "nav-item">
+						<a class = "nav-link active"  href="#">Link</a>
+					</li>
+					<li class = "nav-item">
+						<a class = "nav-link" href="#">Disabled</a>
+					</li>
+                </ul>
+            </div>
+            <div class = "card-body">
+                <h4>Card Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, perspiciatis.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- IMAGE OVERLAYS -->
+		<!-- কার্ড এর মধ্যে একটা ইমেজ থাকবে, আমাদের উদ্দেশ্য ইমেজের উপরে কার্ডের সব লেখা শো করবে --> 
+		
+		
+        <div class = "card">
+            <img class = "card-img" src="http://lorempixel.com/900/200/sports/">
+            <div class = "card-img-overlay text-dark"> <!-- class = "card-img-overlay" এইটা ইমেজের উপর এই div ট্যাগের সমস্ত আইটেম বসিয়ে দেয়  -->
+                <h4>Card title</h4>
+                <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p><small>Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- CARD OUTLINE -->
+		<!-- বর্ডার এবং কার্ডের টাইটেল সমূহের কালার কিভাবে চেঞ্জ করতে হয়  -->
+        <div class = "card border-danger"> <!-- border-danger দিয়ে বর্ডারের কালার চেঞ্জ করা যায়   -->
+            <div class = "card-body">
+                <h4 class = "card-title text-primary">Card Title</h4> <!--  text-primary দ্বারা টাইটেলের কালার চেঞ্জ করা হবে -->
+                <p class = "card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+            </div>
+        </div>
+        <br>
+		
+        <div class = "card border-danger">
+            <div class = "card-body">
+                <h4 class= "card-title text-danger">Card Title</h4>
+                <p class = "card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+            </div>
+        </div>
+        <br>
+        <div class = "card border-warning">
+            <div class = "card-body">
+                <h4 class= "card-title text-success">Card Title</h4>
+                <p class = "card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+            </div>
+        </div>
+        <br>
+        <div>
+            <div>
+                <h4>Card Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+            </div>
+        </div>
+        <br>
+        <div>
+            <div>
+                <h4>Card Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- CARD GROUP -->
+		<!-- কার্ড গ্রুপ কিভাবে ব্যাবহার করতে হয়-->
+		
+		<!-- গ্রুপ করলে সব কার্ড পাশাপাশি শো করে , এর জন্য ১ম div এ card-group এই ক্লাস ইউজ করতে হবে -->
+		<h1> Card group</h1>
+		<br>
+		
+        <div class = "card-group"> <!-- এই ক্লাস ইউজ করলে এই div এর আন্ডারে যত কার্ড আছে সবাই গ্রুপ আকারে শো করবে  -->
+            <div class = "card bg-success">
+                <div class = "card-body">
+                    <h4>Card Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-body">
+                    <h4>Card Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+                </div>
+            </div>
+            <div class = "card bg-warning">
+                <div class = "card-body">
+                    <h4>Card Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</ p>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+         <!-- CARD DECK -->
+		 <!-- card deck অনেকটা card-group এর মতই কিন্তু card-group এ কার্ডগুলো একসাথে ছিল কিন্তু card-deck এ কার্ডগুলো আলাদা থাকবে এবং তাদের মধ্যে ফাকা জায়গা থাকবে -->
+		<h1> Card deck </h1> 
+        <div class = "card-deck"> <!-- card-deck class -->
+            <div class = "card">
+                <div class = "card-body">
+                    <h4 class = "card-title">Card Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-body">
+                    <h4 class = "card-title">Card Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-body">
+                    <h4 class = "card-title">Card Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.</p>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- CARD COLUMNS -->
+		<!-- সকল কার্ডগুলো কলাম আকারে পরপর শো করা, এক লাইনে জায়গা না হলে নিচে আরও লাইন তৈরি করে  শো করা -->
+		<h1> Card Columns</h1>
+        <div class = "card-columns">
+            <div  class = "card">
+                <img class = "card-img-top"src="http://lorempixel.com/400/200/sports/1" alt="Card image cap">
+                <div class = "card-body">
+					<h4> 1.Card title that wraps to a new line</h4>
+					<p>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+            <div class = "card">
+                <blockquote class = "card-body">
+					<p>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+					<footer>
+						<small>
+						Someone famous in <cite title="Source Title">Source Title</cite>
+						</small>
+					</footer>
+                </blockquote>
+            </div>
+            <div class = "card">
+                <img class = "card-img-top"src="http://lorempixel.com/400/200/sports/2" alt="Card image cap">
+                <div class = "card-body">
+					<h4 >3. Card title</h4>
+					<p>This card has supporting text below as a natural lead-in to additional content.</p>
+					<p><small>Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class = "card">
+                <blockquote class = "card-body">
+					<p>4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+					<footer>
+						<small>
+						Someone famous in <cite title="Source Title">Source Title</cite>
+						</small>
+					</footer>
+                </blockquote>
+            </div>
+            <div class = "card">
+                <div class = "card-body">
+					<h4>5. Card title</h4>
+					<p>This card has supporting text below as a natural lead-in to additional content.</p>
+					<p><small>Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div>
+                <img class = "card-img-top" src="http://lorempixel.com/400/200/sports/3" alt="Card image">
+            </div>
+				<div class = "card">
+					<blockquote class = "card-body">
+						<p>6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+						<footer>
+							<small>
+							Someone famous in <cite title="Source Title">Source Title</cite>
+							</small>
+						</footer>
+					</blockquote>
+				</div>
+				<div class = "card">
+					<div class = "card-body">
+						<h4>7. Card title</h4>
+						<p>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+						<p><small>Last updated 3 mins ago</small></p>
+					</div>
+				</div>
+            </div> <!-- card column div -->
+	  </div>
+  		<!--এখানে যে সিকোয়েন্সে <script> ট্যাগ গুলা আছে সেইভাবেই দিতে হবে  -->
+      <div style="margin-top:500px;"></div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3m IykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

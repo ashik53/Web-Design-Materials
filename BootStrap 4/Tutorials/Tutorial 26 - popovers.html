@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Tooltips | Bootstrap 4</title>
+</head>
+<body>
+  <h1 class="display-3 text-center my-4">Popovers</h1>
+  <div class="container">
+    <!--########################START HERE#########################-->
+
+    <!-- POPOVER -->
+	<!-- popover অনেকটা tooltip এর মতই , popover বেশি স্পেস কাভার করে , এবং এর হেডার ও বডি আছে  -->
+	
+	<!--Mainly popover এ data-toggle থাকে যার ভ্যালু popover, title টা হল হেডার এবং data-content হল information  -->
+	<!--আমাদের কিছু JQUERY code অ্যাপ্লাই করতে হবে otherwise এটা কাজ করবে না  -->
+	
+	<!-- নিচের এই বাটনে popover ডানে শো করবে  -->
+    <button class = "btn btn-sm btn-primary" data-toggle ="popover" title ="Hello World!" data-content="With HTML you can create your own Website. " data-placement="top">Toggle popover top</button> <!-- data-content এ বেশি word থাকেলে popover অন্য কোথাও শো করতে পারে  -->
+
+	<!-- এখন উপরের বাটনের মত কয়েকটা বাটন তৈরি করব যেখানে  popover যথাক্রমে right, bottom, left এবং নিচে শো করবে -->
+
+    <button class = "btn btn-sm btn-danger" data-toggle ="popover" title ="Hello World!" data-content="With HTML you can create your own Website. This should be your first choice." data-placement="right">Toggle popover right</button>
+	
+	<button class = "btn btn-sm btn-warning" data-toggle ="popover" title ="Hello World!" data-content="With HTML you can create your own Website. This should be your first choice." data-placement="left">Toggle popover bottom</button>
+	
+	<button class = "btn btn-sm btn-info" data-toggle ="popover" title ="Hello World!" data-content="With HTML you can create your own Website. This should be your first choice." data-placement="left">Toggle popover left</button>
+	<!-- লেফটে জায়গা না পেলে রাইটে শো করবে  -->
+	<br> <br>
+	
+	
+	
+
+    <!-- DISMISSIBLE POPOVER  -->
+    <!-- ব্ল্যাংক স্ক্রিনে প্রেস করলে popover remove হয়ে যাবে, এটা করতে হবে, একে বলে dismissable popover -->
+	
+	<button id ="popover1" class = "btn btn-sm btn-info" data-trigger ="focus" data-toggle ="popover" title ="Hello World!" data-content="With HTML you can create your own Website. This should be your first choice." data-placement="left">Dismissable popover</button>
+	
+	
+	<br><hr>
+
+    <!-- Control with JS-->
+	<!-- js দিয়ে তিনটা বাটন তৈরি করব, ১মটা popover show করবে , ২য়টা popover হাইড করবে , ৩য়টা popover hide, show দুইটাই করবে -->
+	
+	<button class ="btn btn-secondary btn-sm" onClick="showPopover()">Show popover</button> <!-- JS ইউজ করতে হলে ক্লিক করার অপশন তৈরি করতে হবে, তার জন্য onClick() ফাংশন তৈরি করতে হবে, উপরে একদম শেষের বাটনটা ইউজ করার জন্য popover1 আইডি ইউজ কর    -->
+	
+	<button class ="btn btn-dark btn-sm" onClick="hidePopover()">Hide popover</button> <!-- JS ইউজ করতে হলে ক্লিক করার অপশন তৈরি করতে হবে, তার জন্য onClick() ফাংশন তৈরি করতে হবে, উপরে একদম শেষের বাটনটা ইউজ করার জন্য popover1 আইডি ইউজ কর    -->
+	
+	<button class ="btn btn-info btn-sm" onClick="togglePopover()">Toggle popover</button>
+    
+  </div> <!-- container -->
+
+  <div style="margin-top:500px;"></div>
+
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script>
+    // একটা সিম্পল popover এর JS code 
+	$('[data-toggle="popover"]').popover();
+	//popover শো কোড 
+	function showPopover(){
+		$('#popover1').popover('show');
+	}
+	// popover hide কোড 
+	function hidePopover(){
+		$('#popover1').popover('hide');
+	}
+	// popover toggle কোড 
+	function togglePopover(){
+		$('#popover1').popover('toggle');
+	}
+	
+  </script>
+</body>
+</html>

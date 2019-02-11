@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Collapse & Accordion | Bootstrap 4</title>
+</head>
+<body>
+  <h1 class="display-4 text-center my-4">Collapse & Accordion</h1>
+
+  <!-- Collapse & Accordion নিয়ে কাজ করব  -->
+  
+  <div class="container">
+  <!--########################START HERE#########################-->
+
+  <!-- BUTTON WITH COLLAPSE -->
+  <!-- কোন  ট্যাগের মধ্যে যদি collapse ক্লাস ইউজ করা হয় তাহলে সেটা শো করে না , শুধুমাত্র data-toggle ( ক্লিক করলে আসবে, ক্লিক করলে চলে যাবে)  দিয়ে এটা শো করানো যায়  -->
+  <!-- এখন আমরা একটা বাটন ডিজাইন করব, যেখানে ক্লিক করলে কিছু লেখা দেখাবে, লেখাগুলো যে div ট্যাগের মধ্যে থাকবে সেটায় অবশ্যই collapse ক্লাস থাকবে -->
+  
+	  <button class ="btn btn-primary mb-2" data-target="#collapse-1" data-toggle ="collapse">Read More</button> <!-- যে লেখা গুলো দেখাবে সেটা যেন বাটনের একটু নিচে শো করে সে জন্য বাটনের নিচে মার্জিন নিলাম -->
+
+	  <div class= "collapse" id= "collapse-1"> <!--বাটনের সাথে এই  div এর একটা কানেকশন তৈরি করতে হবে ,তার জন্য একটা id রাখব ( id নেমটা নিজের ইচ্ছাধীন )  id টার সেম নেম বাটনের মধ্যে রাখ -->
+		<div class = "card" >
+		  <div class ="card-body">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic necessitatibus expedita similique a, ipsum explicabo! Doloribus eligendi at voluptates tempore quisquam odit, temporibus quis dignissimos vero perspiciatis porro ducimus unde!
+		  </div>
+		</div>
+	  </div>
+
+	  <br>
+	  
+	  
+	  <!-- ACCORDION -->
+	  <!-- বিভিন্ন ওয়েব পেজে দেখা যায় vertically কিছু  সেকশন লিংক দেখায় যেগুলোর কন্টেন্ট হিডেন থাকে, ক্লিক করলে শো করে, এইগুলো accordion দিয়ে তৈরি করে  -->
+	  <!-- আমরা তিনটা সেকশন তৈরি করব  -->
+	  <div id = "accordion" role ="tablist"> <!-- বেশ কয়েকটা tab নিয়ে কাজ করতে হতে পারে তাই tablist  -->
+		<div class="card"> 
+			<div class="card-header" role = "tab"> <!-- role গুলো ডিফাইন করে দিতে হবে , এখানে tab হিসেবে কাজ করছে , কারন এখানে একটাই link  -->
+				<h5 class="mb-0"> 
+				
+					<a href ="#section-1" data-toggle ="collapse">Section 1 </a> <!-- data-toggle এর মধ্যে collapse div টা কল করলাম  -->
+				
+				</h5><!--এই header এর নিচে  আমরা কোন  মার্জিন রাখব না, তাই mb-0-->
+			
+			</div> <!-- card header -->
+			
+			<!--collapsable div টা এখানে রাখব  -->
+			<div class = "collapse show" id="section-1" data-parent ="accordion"> <!-- collapse-show ক্লাস দিলে কন্টেন্ট দেখাবে  ।  এইখানে head accordion এর id দেখাতে হবে , সেটা data-parent ="id of accordion" , এখানে id = "#accordion" -->
+				<div class= "card-body">
+					<p> A group of nurses at Bangabandhu Sheikh Mujib Medical University (BSMMU) went on strike this morning protesting an incident of alleged assault by hospital staff</p>
+				</div>
+			</div>
+		</div> <!-- div card -->
+		
+		<!-- card ইউজ করে আরও কয়েকটা সেকশন তৈরি করব  -->
+		
+		<div class="card"> 
+			<div class="card-header" role = "tab"> 
+				<h5 class="mb-0"> 
+				
+					<a href ="#section-2" data-toggle ="collapse">Section 2 </a> 
+				</h5>
+			
+			</div>
+			
+			
+			<div class = "collapse" id="section-2" data-parent ="accordion"> <!--এই কলাপ্স কন্টেন্টগুলো বাই ডিফল্ট hidden থাকবে তাই show ক্লাসটা ইউজ করব না  -->
+				<div class= "card-body">
+					<p>2.  A group of nurses at Bangabandhu Sheikh Mujib Medical University (BSMMU) went on strike this morning protesting an incident of alleged assault by hospital staff</p>
+				</div>
+			</div>
+		</div> <!-- div card 3 -->
+		
+		<div class="card"> 
+			<div class="card-header" role = "tab"> 
+				<h5 class="mb-0"> 
+				
+					<a href ="#section-3" data-toggle ="collapse">Section 3 </a> 
+				</h5>
+			
+			</div>
+			
+			
+			<div class = "collapse" id="section-3" data-parent ="accordion"> <!--এই কলাপ্স কন্টেন্টগুলো বাই ডিফল্ট hidden থাকবে তাই show ক্লাসটা ইউজ করব না  -->
+				<div class= "card-body">
+					<p> 3. A group of nurses at Bangabandhu Sheikh Mujib Medical University (BSMMU) went on strike this morning protesting an incident of alleged assault by hospital staff</p>
+				</div>
+			</div>
+		</div> <!-- div card-->
+		
+	  </div> <!-- div id = "accordion" -->
+	  
+
+
+  </div> <!--container -->
+
+  <div style="margin-top:500px;"></div>
+
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

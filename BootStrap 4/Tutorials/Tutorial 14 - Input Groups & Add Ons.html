@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Input Group | Bootstrap 4</title>
+</head>
+<body>
+
+
+
+	<h1 class="display-4 text-center my-4">Input Groups & Addons</h1>
+      <div class="container">
+        <!--########################START HERE#########################-->
+		
+		<!-- ইনপুট বক্সের আগে অথবা পরে কিছু লেখা / চিহ্ন এনে সেটা বক্সের সাথে অ্যাডজাস্ট করা এইটাই  অ্যাডঅনস -->
+		
+		
+
+			 <div class = "input-group">
+				<div class = "input-group-prepend">
+				  <span class = "input-group-text" >@</span>
+				</div> <!-- div = "input-group" এবং span = "input-group-text" লিখলে  @ টা বক্স হয়ে input বক্সের সামনে লেগে যাবে  কিন্তু পুরোপুরি লেগে যাবে না, সংযোগস্থলে কিছুটা ফাকা জায়গা থাকবে ; পরে div ক্লাসের মধ্যে input-group-prepend ইউজ করলে ফাকা জায়গাটা চলে যাবে  -->
+				<input class = "form-control" type="text" placeholder="Username">
+			</div>
+			<br>
+        <div class = "input-group">
+            <input class = "form-control" type="text" placeholder="Email address">
+            <div class = "input-group-append">
+              <span class = "input-group-text">@something.com</span>
+            </div>
+        </div>
+		
+        <br>
+		
+        <label for="profile-url">Choose profile URL</label>
+        <div class = "input-group">
+            <div class = "input-group-prepend">
+              <span class = "input-group-text">https://something.com/member/</span>
+            </div>
+            <input class = "form-control"type="text" id="profile-url">
+        </div>
+		
+        <br>
+		
+        <div class = "input-group">
+            <div class = "input-group-prepend">
+              <span class = "input-group-text">$</span>
+            </div>
+            <input  class = "form-control" type="text">
+            <div class = "input-group-append">
+              <span class = "input-group-text" >.00</span>
+            </div>
+        </div>
+		
+        <br>
+		
+        <div class = "input-group input-group-lg">
+            <div class = "input-group-prepend" >
+              <span class = "input-group-text" >@</span>
+            </div>
+            <input  class = "form-control" type="text" placeholder="Username">
+        </div>
+		
+        <br>
+        
+		<!-- ইনপুট ফিল্ডের আগে চেকবক্স রাখা এবং এই দুইটাকে এডজাস্ট  করা -->
+		
+		<div class = "input-group">
+            <div class = "input-group-prepend">
+              <span class = "input-group-text" >
+                  <input type="checkbox">
+              </span>
+            </div>
+            <input class = "form-control" type="text">
+        </div>
+        
+		<br>
+        
+		<!-- চেকবক্স এবং লেখা এই দুইটাকে একসাথে ইনপুট ফিল্ডের সাথে অ্যাডজাস্ট করা  -->
+		
+		
+		
+		<div class = "input-group">
+            <div class = "input-group-prepend">
+              <span class = "input-group-text">
+                  <input  type="radio">
+              </span>
+            </div>
+            <div class = "input-group-prepend">
+              <span class = "input-group-text">$5.00</span>
+            </div>
+            <input class = "form-control" type="text">
+        </div>
+		
+		<br>
+		
+		<!-- সার্চ বাটন তৈরি করা 
+
+			ফিল্ডের সাথে সার্চ বাটন যোগ করার জন্য আলাদা div ক্লাস তৈরি করা লাগে না , span ক্লাসের ভিতরে বাটন ক্লাস রেখে কাজ করতে হয়-->
+		
+         <div class = "input-group">
+            <input  class = "form-control" type="text" placeholder="Search for...">
+			
+				<span class = "input-group-append">
+					<button  type="button">Search</button>
+				</span>
+			
+        </div>
+
+    </div><!-- ./container -->
+	
+<!--এখানে যে সিকোয়েন্সে <script> ট্যাগ গুলা আছে সেইভাবেই দিতে হবে  -->
+    <div style="margin-top:500px;"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3m IykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+	
+	
+	

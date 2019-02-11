@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Alert & Progress Bars | Bootstrap 4</title>
+</head>
+<body>
+      <h1 class="display-4 text-center my-4">Alerts & Progress Bars</h1>
+      <div class="container">
+        <!--########################START HERE#########################-->
+		<!-- অনেক সময় ওয়েবসাইটে বিভিন্ন রকম alert দেখা যায়, failed, successfully, warning এইসব alert কিভাবে ব্যাবহার করা যায় টা আজকে আমরা শিখব  -->
+
+		 <!-- কোন ওয়েবসাইটে গেলে কোন কিছুতে কোন কিছুর পরিমান কত শতাংশ তা progress দিয়ে নিরুপন করা যায়। যেমন ধরি php কোর্সে  আমার স্কিল ৫০% কমপ্লিট , জাভাস্ক্রিপ্টে আমার স্কিল ২৫% কমপ্লিট  । progress bar দিয়ে এইসব effectively দেখানো যায়  -->
+
+		 <!-- Alerts -->
+		 <!-- প্রথমে আমরা একটা success alert দেখাবো  -->
+
+		 <div class = "alert alert-success"> <!-- alert ক্লাস দিলে এই div এর চারপাশে মার্জিন হয়  , তারপর alert-success দিলে পুরো background এর কালার success হয়ে যায় এবং সমস্ত লেখার কালার success এর সাথে ম্যাচ হয়ে যায়  -->
+			<strong> Success</strong> Posted a review <a class = "alert-link"href = "#"> Check it out </a> <!--alert-link ব্যাবহার করলে লেখা বোল্ড হয়ে যায় এবং  -->
+		 </div>
+
+		 <!--Attention alert  -->
+
+		 <div class = "alert alert-warning">
+			<strong> Attention</strong> You have a new message <a class = "alert-link" href =  "#"> Check it out </a>
+		 </div>
+
+
+		 <!--Warning alert -->
+
+		 <div class = "alert alert-danger">
+			<strong> Attention</strong> You have a new message <a class = "alert-link" href =  "#"> Check it out </a>
+		 </div>
+
+		 <!--Failed alert -->
+
+		 <div class = "alert alert-danger">
+
+			<h4> There is a problem </h4>
+			<strong>Error</strong> Database update failed <a class = "alert-link" href =  "#"> Check it out </a>
+		 </div>
+
+		 <!-- Dismissable -->
+
+		 <!-- pop up মেসেজ বানানো , সাথে কিছু এনিমেশন যোগ করা  -->
+
+		 <!-- পপ আপ মেসেজ টা ক্রস বাটন দিয়ে হাইড  করা যায়, এর জন্য  div এর ভিতরে  class = alert-dismissable-- এবং যে বাটন টা ডিসমিস করবে সেটার মধ্যে  data-dismiss = "alert" likhte hoy-->
+		 <div class = "alert alert-success alert-dismissable fade show"> <!-- fade show একটা এনিমেশন তৈরি হয় লিখলে, কিন্তু এটা আমার ডিভাইসে কেন জানি কাজ করছে না ( CDN লিঙ্কগুলা বাদ দিলে কাজ করবে )   -->
+			  <button type = "button" class = "close" data-dismiss = "alert"> <!-- x button তৈরি হয়  যদি এইভাবে span টা লিখি , close টা লিখলে বাটন ডানপাশে চলে যায়। -->
+					<span>&times;</span>
+			  </button>
+
+			  <strong>Success</strong> Blog post added <a href = "#"> Check it out </a>
+
+		  </div>
+		  <br> <br>
+
+      <!-- প্রোগ্রেস বার ডিজাইন করা -->
+      <div class = "progress"> <!-- progress ক্লাসটি লিখলে একটা বার এর ব্যাক গ্রাউনড দেখাবে  -->
+          <div class = "progress-bar" style = "width: 30%"> HTML</div><!-- width এর ৩০% এর মধ্যে লেখাটা যদি দেখাতে চাই তাহলে style প্রোপার্টি ব্যাবহার করতে হবে , ৫০% ইউজ করতে চাইলে ৩০% এর স্থলে ৫০% লাগবে  -->
+      </div>
+      <br>
+
+      <!-- height & width একসাথে ইউজ করব  -->
+      <div class = "progress">
+          <div class = "progress-bar"style = "width: 25% "> 25%</div>
+      </div>
+      <br>
+      <!-- for 50% ,and change the background colour-->
+      <div class = "progress">
+          <div class = "progress-bar bg-success"style = "width:50% "> 50%</div> <!-- using bg-success we -->
+      </div>
+      <br> <br>
+
+      <div class = "progress">
+          <div class = "progress-bar bg-success text-dark"style = "width:100% "> 100%</div> <!-- using bg-success we-- >
+      </div>
+      <br>
+      <!-- for 100% ,and change the background colour-->
+
+
+	  </div><!-- ./container -->
+
+    <!--<div style="margin-top:500px;"></div> -->
+
+
+  		<!--এখানে যে সিকোয়েন্সে <script> ট্যাগ গুলা আছে সেইভাবেই দিতে হবে  -->
+      <div style="margin-top:500px;"></div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3m IykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

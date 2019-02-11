@@ -1,0 +1,449 @@
+<!-- Nav and Navbar-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- font awesome cdn লিংক করানো -->
+
+	<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <title>T-11  Nav & Navbar </title>
+</head>
+<body>
+
+    <!-- nav ট্যাগ কোন div ট্যাগ এর ভিতরে থাকবে না, এইটার ভিতরে div ট্যাগ থাকতে পারে  -->
+
+		<!-- Simple Navbar -->
+
+		<nav class="navbar navbar-light bg-light navbar-expand-sm"> <!-- এটি একটি navbar ক্লাস ,  navbar-light = কালার, ফন্ট চেঞ্জ হয়ে গেছে , bg-light = background  লাইট কালারের, sm এর নিচে লিস্ট আকারে দেখাবে  -->
+			<div class="container">
+				<a class = "navbar-brand" href="#"> Navbar </a> <!--এইখানে ইমেজ ট্যাগের মাধ্যমে ওয়েবসাইটের লোগোটা  রাখা যায় , navbar-brand লেখাকে আরেক্তু বড় করে দেয় -->
+					<ul class = "navbar-nav"> <!-- navbar-nav vertical লিংকগুলোর  আগের বুলেট পয়েন্ট সরিয়ে দেয় -->
+						<li class = "navbar-item">  <!-- nav-link + navbar-item যথাক্রমে li এবং a ট্যাগের ভিতরে প্রবেশ করালে লিংক গুলার মধ্যে ফাকা হয়ে যায় এবং, কালারটাও চেঞ্জ হয়ে যায়, লিঙ্কগুলো horizobtal শো করে   -->
+							<a class = "nav-link" href="#">Home</a>
+						</li>
+						<li class = "navabr-item">
+							<a class = "nav-link" href="#">About</a>
+						</li>
+						<li class = "navbar-item">
+							<a class = "nav-link" href="#">Services</a>
+						</li>
+						<li class = "navbar-item">
+							<a class = "nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+
+		    </div>
+		</nav>
+
+
+		<!-- mainly আমরা এখানে  একটা Toggle মেনুর কাজ দেখব, যেটা মিডিয়াম ডিভাইসের উপরে মেনুগুলা শো করাবে , কিন্তু তার নিচে মেনুগুলো একটা আইকন দ্বারা হাইড থাকবে এবং ক্লিক করলে মেনুটা দেখাবে , আবার ক্লিক করলে মেনু হাইড হবে   -->
+
+		<nav class="navbar navbar-light bg-light navbar-expand-md">  <!-- navabar-expand = navbar কে horizontally expand করবে , navbar-expand-sm = মেনুটা মিডিয়াম ডিভাইস  এবং এর উপরের  জন্য horizontal এক্সপানড হবে, কিন্তু মিডিয়ামের নিচে  vartically দেখাবে (below 767px)  -->
+			  <div class="container">
+				  <a class = "navbar-brand" href="#"> Navbar </a>  <!-- মেনু আইকন আনার জন্য এর নিচে একটা বাটন ট্যাগ আনতে হবে এবং তার মধ্যে একটা  span ট্যাগ  রাখতে হবে -->
+
+          <!-- small এবং এর নিচের device গুলোতে এই বাটন ট্যাগে ক্লিক করলে menu আইটেম আসবে  -->
+				  <button class ="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#click1"> <span class = "navbar-toggler-icon"> <!-- data-toggle = "collapse" means , data-toggle এর ইনফরমেশনের পুরোটাই collpase ক্লাসের ভিতরের এলিমেনট থেকে আসবে  --> </span></button> <!-- span class = "navbar-toggler-icon" এবং  button class ="navbar-toggler" এই দুইটা ক্লাস  মেনু আইকনটা আনবে  || navbar-toggler-right এই ক্লাসটা নিলে আইকনটা সবসময় সর্বডানে দেখাবে -->
+
+				   <!-- পুরো লিস্টটাকেই আমি অদৃশ্য করে দিব , সুতরাং পুরো লিস্ট ট্যাগটা আমি div এর মধ্যে রেখে দেব এবং কলাপ্স ক্লাস ইউজ করব, যাতে এইটা অদৃশ্য হয়ে যায়  -->
+				  <div class = "collapse navbar-collapse" id ="click1"> <!-- এইখানটা কলাপ্স করবে তাই id সেট করা হয়েছে  , এই আইডি Toggle থেকে কল হবে --><!-- navbar-collapse,  div ট্যাগটাকে বলে দেয় যে কোন ধরনের এলিমেনট কলাপ্স করবে  , এখানে navbar collapse করেছে -->
+    					<ul class = "navbar-nav ml-auto"> <!-- vertical লিংকগুলোকে horizontal করে ফেলে , ml-auto = list আইটেমগুলা ডানে সরিয়ে দেয়  (এটা না থাকলে লিস্ট আইটেমগুলা   বামে শো করবে -->
+    						<li class = "navbar-item">  <!-- nav-link + navbar-item যথাক্রমে li এবং a ট্যাগের ভিতরে প্রবেশ করালে লিংক গুলার মধ্যে ফাকা হয়ে যায় এবং, কালারটাও চেঞ্জ হয়ে যায়  -->
+    							<a class = "nav-link" href="#">Home</a>
+    						</li>
+    						<li class = "navbar-item">
+    							<a class = "nav-link" href="#">About</a>
+    						</li>
+    						<li class = "navbar-item">
+    							<a class = "nav-link" href="#">Services</a>
+    						</li>
+    						<li class = "navbar-item">
+    							<a class = "nav-link" href="#">Contact</a>
+    						</li>
+    					</ul>
+		        </div> <!-- collpase div-->
+		    </div> <!-- container -->
+		</nav>
+
+
+	<!------------------------  Another part  ---------->
+
+	<!-- Navbar with form (লোগো থাকবে, সার্চ অপশন থাকবে)  , এর জন্য আমাদেরকে লিস্ট ট্যাগের শেষে একটা ফর্ম ট্যাগ নিতে হবে -->
+		<nav class="navbar navbar-light bg-light navbar-expand-md">
+			<div class="container">
+				<a class = "navbar-brand" href="#"> Navbar </a>
+
+				<button class ="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#click2"> <span class = "navbar-toggler-icon">  </span></button>
+
+
+				  <div class = "collapse navbar-collapse" id ="click2">
+					<ul class = "navbar-nav mx-auto">
+						<li class = "navbar-item">
+							<a class = "nav-link" href="#">Home</a>
+						</li>
+						<li class = "navabr-item">
+							<a class = "nav-link" href="#">About</a>
+						</li>
+						<li class = "navbar-item">
+							<a class = "nav-link" href="#">Services</a>
+						</li>
+						<li class = "navbar-item">
+							<a class = "nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+
+					<!-- এইখান থেকে ফর্ম ট্যাগ শুরু করতে হবে ,
+                        form ট্যাগের সাথে একটা সার্চ বাটন থাকবে যেটা ডানদিকে শো করবে 					-->
+					<form class = "form-inline ml-auto"> <!-- form inline ক্লাসটা দিলে ফর্মের সব ট্যাগ  ফিল্ড সেম লাইনে দেখাবে , এবং বাটন এবং ইনপুট ফিল্ড লাগালাগি অবস্থায় দেখাবে   , ml-auto ফর্মটা সর্বডানে দেখাবে -->
+						<input class ="form-control"type="text" placeholder= "Search"><!-- form-control ক্লাস টা ইউজ করলে আমাদের ফরমের আকার , ফন্ট ইত্যাদি ডিফল্ট থেকে চেঞ্জ হয়ে অন্য টাইপ শো করবে -->
+						<!-- বাটন -->
+						<button class = "btn btn-success"> Search</button>
+					</form>
+
+		        </div> <!-- collpase div-->
+		    </div>
+		</nav>
+
+
+
+		<!--- Navbar with dropdown(toggle) --->
+
+
+    	<nav class="navbar navbar-light bg-light navbar-expand-md">
+			<div class="container">
+				<a class = "navbar-brand" href="#"> Navbar </a>
+
+				<button class ="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#click"> <span class = "navbar-toggler-icon">  </span></button>
+
+
+				  <div class = "collapse navbar-collapse" id ="click">
+					<ul class = "navbar-nav mx-auto">
+						<li class = "navbar-item">
+							<a class = "nav-link" href="#">Home</a>
+						</li>
+
+						<!-- এই লিংক থেকে আমি Dropdown মেনু তৈরি করব (সাথে Toggle)  -->
+
+						<li class = "navabr-item dropdown">
+							<a class = "nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown </a>
+							<div class="dropdown-menu bg-primary">
+								<a href="#" class="dropdown-item"> Link 1</a>
+								<a href="#" class="dropdown-item">Link 2 </a>
+								<a href="#" class="dropdown-item">Link 3</a>
+							</div>
+						</li>
+
+						<!-- Suppose , কোন একটা পেজ ক্লিক করা হল , সেই পেজের নামটা একটু অন্যরকম হয়ে গেল , মেনুর মধ্যে থাকলে অন্য রকম হয়ে যাবে, এইটা "active" class ইউজ করে করতে হবে   -->
+
+
+						<li class = "navbar-item active">
+							<a class = "nav-link" href="#">Services</a>
+						</li>
+						<li class = "navbar-item">
+							<a class = "nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+
+					<!-- -->
+					<div class ="form-group">
+					<form class = "form-inline ml-auto"> <!-- -->
+						<input class ="form-control"type="text" placeholder= "Search"><!-- -->
+						<!-- বাটন -->
+						<button class = "btn btn-success"> Search</button>
+					</form>
+					</div>
+
+		        </div> <!-- collpase div-->
+		    </div>
+		</nav>
+
+	    <br> <br>
+
+
+			<!-- Another part -->
+
+
+		<!-- Color নিয়ে কাজ করা  -->
+
+		<!-- মেনুর ব্যাকগ্রাউনড কালার চেঞ্জ করা , এইজন্য Nav ট্যাগে bg এর পরে primary/ success / dark  সহ আরও কিছু কালার  ইউজ কর -->
+
+		<nav class="navbar navbar-light bg-info navbar-dark  navbar-expand-md">  <!-- navbar-dark ইউজ করলে ভাল হয় কারন এটা ব্যাকগ্রাউনডের কালারের সাথে মিল রেখে ফন্টের কালার সেট করে  -->
+			<div class="container">
+				<a class = "navbar-brand" href="#"> Navbar </a>
+
+				<button class ="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#click"> <span class = "navbar-toggler-icon">  </span></button>
+
+
+				  <div class = "collapse navbar-collapse" id ="click">
+					<ul class = "navbar-nav mx-auto">
+						<li class = "navbar-item">
+							<a class = "nav-link" href="#">Home</a>
+						</li>
+
+
+
+						<li class = "navabr-item dropdown">
+							<a class = "nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown </a>
+							<div class="dropdown-menu bg-primary">
+								<a href="#" class="dropdown-item"> Link 1</a>
+								<a href="#" class="dropdown-item">Link 2 </a>
+								<a href="#" class="dropdown-item">Link 3</a>
+							</div>
+						</li>
+
+
+
+
+						<li class = "navbar-item active">
+							<a class = "nav-link" href="#">Services</a>
+						</li>
+						<li class = "navbar-item">
+							<a class = "nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+
+					<!-- -->
+					<form class = "form-inline ml-auto"> <!-- -->
+						<input class ="form-control"type="text" placeholder= "Search"><!-- -->
+						<!-- বাটন -->
+						<button class = "btn btn-success"> Search</button>
+					</form>
+
+		        </div> <!-- collpase div-->
+		    </div>
+		</nav>
+
+		<br> <br>
+
+
+		<!-- Navs -->
+
+
+		<div class= "container">
+
+			<!-- ( ul ট্যাগ দিয়ে কিভাবে nav ইউজ করে ) -->
+
+			<ul class="nav nav-pills"> <!-- যখনই তুমি nav ক্লাসটা ইউজ করবে তখন horizontal মেনু এর মত শো করবে (লিংকগুলা গায়ে গায়ে লেগে থাকবে কিন্তু!, তারপর link এর মধ্যে nav-item এবং a ট্যাগের মধ্যে nav-link ক্লাস ইউজ করলে আলাদা আলাদা দেখাবে)-->
+
+				<li class = "nav-item">
+
+					<!-- কোন লিংক একটিভ রাখার জন্য  a = "active" এবং ul = "nav-pills" এই দুটি ক্লাস ইউজ করতে হবে -->
+
+					<a class = "nav-link active" href = "#"> Link 1 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 2 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 3 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 4 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 5 </a>
+				</li>
+
+			</ul>
+
+		<br> <br>
+
+		<!-- Horizontal Align  -->
+		<h1> Horizontal align</h1>
+		<!-- horizontal align মানে কিভাবে কোন কন্টেন্টকে কিভাবে লেফট, রাইট এবং সেন্টারে align করা যায় -->
+
+		<div class= "container">
+
+
+			<ul class="nav nav-pills justify-content-center"> <!-- justify-content এর পরে center বসালে মাঝে দেখাবে, -->
+
+				<li class = "nav-item">
+
+
+
+					<a class = "nav-link active" href = "#"> Link 1 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 2 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 3 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 4 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 5 </a>
+				</li>
+
+			</ul>
+
+			<br> <br>
+
+			<!-- Right Align  -->
+		<h1> Right align</h1>
+		<!--এইবার কন্টেন্টকে ডানদিকে এলাইন করব  -->
+
+		<div class= "container">
+
+
+			<ul class="nav nav-pills justify-content-end"> <!--  রাইট এলাইন করার জন্য end ক্লাসটা ইউজ করতে হবে -->
+
+				<li class = "nav-item">
+
+
+
+
+					<a class = "nav-link" href = "#"> Link 1 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 2 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 3 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 4 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 5 </a>
+				</li>
+
+			</ul>
+
+			<br> <br>
+
+			<!-- Vertical -->
+
+		<h3> Vertical showOff</h3>
+
+		<!-- এইবার কন্টেন্টকে vertically দেখাব   -->
+
+		<div class= "container">
+
+
+			<ul class="nav nav-pills flex-column"> <!--  flex-column ক্লাসটা কন্টেন্টকে vertically প্রেজেনট করে -->
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 1 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 2 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 3 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 4 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 5 </a>
+				</li>
+
+			</ul>
+
+			<br> <br>
+
+			<!--Fill & Justify -->
+
+	    </div>
+
+		<!-- এইবার কন্টেন্টকে পুরা এরিয়া জুড়েই শো করাব   -->
+
+
+
+
+			<ul class="nav nav-pills nav-fill"> <!-- nav-fill ক্লাসটা পুরা এরিয়াটার দখল নেয়, যদি ৫ টার পরিবর্তে দুইটা লিংক থাকে তবুও -->
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 1 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 2 </a>
+				</li>
+				<!--
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 3 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 4 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 5 </a>
+				</li>
+
+				-->
+
+			</ul>
+
+			<br> <br>
+		
+		<!-- ul ট্যাগের মধ্যে কোন লিঙ্কের সাথে Toggle - dropdown মেনু তৈরি করা -->
+		
+			<ul class="nav nav-pills nav-fill"> <!--  এখানে nav-pills এবং কোন li এ ক্লাসে active প্রোপার্টি  ইউজ করলে  লিংকটা active হয়ে যায় -->
+
+				<li class = " active nav-item">
+					<a class = "nav-link" href = "#"> Link 1 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 2 </a>
+				</li>
+
+				<li class = "nav-item dropdown">
+					<a class = "nav-link dropdown-toggle" data-toggle="dropdown" href = "#"> Link 3 </a>
+
+					<div class = "dropdown-menu bg-danger">
+						<a href="#" class="dropdown-item">Demo Link 1</a>
+
+						<a href="#" class="dropdown-item">Demo Link 2</a>
+						<a href="#" class="dropdown-item">Demo Link 3</a>
+					</div>
+
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 4 </a>
+				</li>
+
+				<li class = "nav-item">
+					<a class = "nav-link" href = "#"> Link 5 </a>
+				</li>
+			</ul>
+
+			<br> <br>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
+
+	<!--এখানে যে সিকোয়েন্সে <script> ট্যাগ গুলা আছে সেইভাবেই দিতে হবে  -->
+    <div style="margin-top:500px;"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3m IykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

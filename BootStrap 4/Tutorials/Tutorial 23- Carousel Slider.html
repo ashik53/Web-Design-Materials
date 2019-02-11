@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Carousel Slider| Bootstrap 4</title>
+  <style>
+        .row-hl{
+            background:#f4f4f4;
+            height:150px;
+        }
+
+        .item-hl{
+            border:1px solid #333;
+        }
+    </style>
+</head>
+<body>
+  <h1 class="display-3 text-center my-4">Carousel Slider</h1>
+  <div class="container">
+    <!--########################START HERE#########################-->
+	
+	<!-- এখন আমরা  slider নিয়ে কাজ করব, অনেক ওয়েবসাইটে দেখা যায় একটা পার্টে কয়েকটা ছবি কিছুসময় পরপর দেখানো হচ্ছে , এটাই  হল slider -->
+	
+	<!-- Slider-->
+	
+	<!-- Slider নিয়ে কাজ করতে হলে  প্রথমে একটা id লাগবে , এখানে আমি slider1 নামে id নিলাম।  -->
+	<!-- slider নিয়ে কাজ করতে হলে আমাদের কিছু ক্লাস এড করা লাগবে,  ১মে carousel তারপর slide , তারপর একটা attribute ইউজ করা লাগবে সেটা data-ride= "carousel" যেহেতু আমরা carousel নিয়ে কাজ করছি  , তারপর আরেকটা div নিয়ে  carousel-inner ক্লাস এড করব -->
+	<div id="slider1" class="carousel slide" data-ride="carousel"> 
+		<!--এই div এ একটা role ইউজ করতে হবে সেটা listbox -->
+		
+		<!-- slider নিচে কিছু বুলেট পয়েন্ট, সিরিয়াল দেওয়া থাকে যেখানে ক্লিক করলে তত তম পজিশনের কন্টেন্ট ( ইমেজ )  দেখা যায় , একে indicator বলে এখন আমরা সেটা বানাবো -->
+		<!-- এর জন্য প্রথমে একটা ol লিস্ট ট্যাগ নেব, class = "carousel-indicator`"  -->
+		<ol class="carousel-indicators">
+			<li class ="active" data-target="#slider1" data-slide-to="0"> </li> <!-- data-target এর মধ্যে আমাদের slider এর নাম দিতে হবে, data-slide-to এর মাধ্যমে ইমেজ কন্টেন্টের সিরিয়াল ডিফাইন করা যায় ,0 = ১ম স্লাইড   -->
+			 <li data-target="#slider1" data-slide-to="1"> </li>
+			 <li data-target="#slider1" data-slide-to="2"> </li>
+			 <li data-target="#slider1" data-slide-to="3"> </li>
+			 <li data-target="#slider1" data-slide-to="4"> </li>
+			 <li data-target="#slider1" data-slide-to="5"> </li>
+		</ol>
+		
+		
+		<div class= "carousel-inner" role = "listbox"> 
+		<!-- এখন আমরা যে ইমেজগুলো শো করাব সেগুলো আইটেম div এর মধ্যে  রাখব  -->
+		    <!-- সবগুলো image দেখানোর জন্য আমাদের  নিচের div কপি করে ইমেজ এড করতে হবে -->
+			<div class = "carousel-item active"> <!-- active মানে এই ইমেজটা প্রথমে থাকবে  -->
+				<!--এবার আমি সবগুলো ইমেজের লিংক এড করব , কিন্তু প্রথমে ইমেজ ভালভাবে শো করবে না, তার জন্য আরও কিছু ক্লাস এড করা লাগবে, image ট্যাগের মধ্যে  class = "d-block img-fluid"( এটা পারফেক্টলি পুরো ব্লকের  width জায়গা নেয়) , তারপর ইমেজটা div এর মধ্যে পারফেক্টলি সেট হয়ে গেছে   -->
+				<img src = "img/image1.jpg" class ="d-block img-fluid" alt ="1st"> 
+			</div>
+			<div class = "carousel-item"> <!-- active ক্লাসটা আর ইউজ হবে না  -->
+				
+				<img src = "img/image2.jpg" class ="d-block img-fluid" alt ="2nd">
+				<!-- ইমেজের উপর লেখা রাখতে হলে caption class ইউজ করতে হবে, যেটা ইমেজ ট্যাগের বাইরে রাখতে হবে  -->
+				<div class="carousel-caption">
+					<h4>First pic </h4>
+					<p>A bug on Twitter leaves Android users exposed </p>
+				</div>
+				
+
+				
+			</div>
+			<div class = "carousel-item">
+				
+				<img src = "img/image3.jpg" class ="d-block img-fluid" alt ="3rd">
+				<div class="carousel-caption">
+					<h4>Second pic </h4>
+					<p>A bug on Twitter leaves Android users exposed </p>
+				</div>
+			</div>
+			<div class = "carousel-item"> 
+				
+				<img src = "img/image4.jpg" class ="d-block img-fluid" alt ="4th">
+				<div class="carousel-caption">
+					<h4>Third pic </h4>
+					<p>A bug on Twitter leaves Android users exposed </p>
+				</div>
+			</div>
+			<div class = "carousel-item"> 
+				
+				<img src = "img/image5.jpg" class ="d-block img-fluid" alt ="5th">
+				<div class="carousel-caption">
+					<h4>Fourth pic </h4>
+					<p>A bug on Twitter leaves Android users exposed </p>
+				</div>
+			</div>
+			<div class = "carousel-item"> 
+				
+				<img src = "img/image6.jpg" class ="d-block img-fluid" alt ="5th"> 
+			</div>
+			
+		
+		</div> <!-- carousel-inner -->
+		
+		<!-- slider এর দুপাশে দুইটা আইকন থাকে বামপাশেরটা back এবং ডানপাশেরটা  front নির্দেশ করে , এখন সেটা বানাতে হবে -->
+		
+		<!--তার জন্য একটা  লিংক ট্যাগ নিতে হবে ( ব্যাক বাটন)    -->
+		<a href = "#slider1" class="carousel-control-prev" data-slide ="prev"> <!-- যেহেতু আমরা slider1 এর কাজ করছি তাই href ="#slider1", data-slide= "prev" না ইউজ করলে prev আইকনটা একটিভ হবে না
+		-->
+			<span class= "carousel-control-prev-icon"> </span> <!-- span ক্লাসটাই ব্যাক আইকনটা নিয়ে আসবে  -->
+		</a>
+		
+		<!-- ফ্রন্ট বাটন তৈরি করার জন্য আগের লিংক ট্যাগটা কপি- পেস্ট করতে হবে, এবং prev এর স্থলে next বসাতে হবে   -->
+		
+		<a href = "#slider1" class="carousel-control-next" data-slide ="next"> 
+			<span class= "carousel-control-next-icon"> </span>
+		</a>
+		
+		
+	
+	</div> <!-- slider1  -->
+
+  </div> <!--container  -->
+
+  <div style="margin-top:500px;"></div>
+
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  <!-- slider এর ইমেজ শো এর টাইম ইন্টারভ্যাল বাড়ানো, কমানো ইত্যাদি customized করা যায়, তার জন্য javascript ইউজ করতে হয় 
+   সেখানে jQuery এর ফাংশান, অবজেক্ট এড করতে হবে , এই কাজ গুলো script ট্যাগের মধ্যে করতে হবে 
+  -->
+  <!-- ১মে slider1 ট্যাগের ক্লাসের নাম , তারপর carousel , ইন্টারভ্যালটার মান মিলি সেকেন্ডে  -->
+  <!-- কোন স্লাইডের উপরে মাউস রাখলে অইখানেই স্লাইডশো স্টপ হয়ে যায়  ( এই ফিচারটা বাই ডিফল্ট থাকে) এইটা সেট করার জন্য pause: 'hover' এইটা লিখতে হবে হবে -->
+  <script>
+  
+	$('.carousel').carousel({
+		interval : 5500,
+		pause: 'hover',
+		wrap: true,
+		keyboard: true
+	});
+  </script>
+  <!-- wrap false লিখলে সবগুলো স্লাইড যখন প্রেজেনট করা হয়ে যাবে তখন প্রেজেনটেশন অফ হয়ে যাবে এবং লাস্ট কনটেন্টের সময় আর নেক্সট আইকন কাজ করবে না  ( বাই ডিফল্ট wrap: true থাকে  --> 
+  
+</body>
+</html>

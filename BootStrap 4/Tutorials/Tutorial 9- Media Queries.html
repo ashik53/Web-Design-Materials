@@ -1,0 +1,97 @@
+
+
+<!-- sizing means margin and padding-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	  <title>Bootstrap 4</title>
+    <style>
+    /* নিচের সিকোয়েন্সে কোড লিখলে কোড সব ডিভাইসের জন্য ঠিকঠাক কাজ করবে ।
+	০-> ৫৭৫ পিক্সেল = extra small devices
+	576-> 699 পিক্সেল = small devices
+	700-> 991 পিক্সেল = medium  devices
+	---------- এইভাবে চলতে থাকবে
+      cntrl+shift+m for firefox
+	  small devices */
+      @media (min-width: 576px){
+        body{
+          background: red;
+        }
+      }
+	  /*medium device ৭০০ থেকে শুরু হয় */
+      @media (min-width: 700px){
+        body{
+          background: green;
+        }
+      }
+	  /*large device, start হয় ৯৯২ পিগজেল থেকে  */
+      @media (min-width: 500px){
+        body{
+          background: black;
+        }
+      }
+
+       /*extra large device , স্টার্ট হয় ১২০০ পিক্সেল  */
+        @media (min-width: 1200px){
+			body {
+				background: orange;
+			}
+		}
+
+
+
+
+    </style>
+</head>
+<body>
+  <h1 class="display-3 text-center my-4">Breakpoints</h1>
+
+<!--
+  /*--------------- new style--------------
+এখন আমরা দেখব max-width property কিভাবে ইউজ করা যায়
+সেম কন্ডিশনে min-width , max-width গুলায় ফেলা যাবে না, তাহলে উল্টা পাল্টা রেজাল্ট দিবে
+সুতরাং , আমরা যে ডিভাইস গুলো extra small  সেগুলোর জন্য max-width property ইউজ করব
+
+///*Large devices (desktop mode) */
+@media (max-width: 1199px){ /* 0 -> 1199px*/
+ body {
+   background: black;
+ }
+}
+
+// /* Medium devices (tablets) */
+@media(max-width: 991px){
+ body{
+   background: orange;
+ }
+
+}
+//small devices (landscape phones)
+@media (max-width: 767px){
+ body{
+   background: yellow;
+ }
+}
+
+//Extra small devices (portrait phones)
+@media (max-width: 575px) {
+ body {
+   background: green;
+ }
+}
+*/
+
+    -->
+
+    <!--এখানে যে সিকোয়েন্সে <script> ট্যাগ গুলা আছে সেইভাবেই দিতে হবে  -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

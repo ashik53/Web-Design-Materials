@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- I can use CDN link instead of below link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- boostrap css file is linked-->
+</head>
+<body>
+    <div style = "margin-top:50px;"> </div>
+	
+        <div class = "container">
+            <!--justify-->
+            <p class = "text-justify" >Ashik iqbal is the best. Ashik iqbal is the best.Ashik iqbal is the best.Ashik iqbal is the best.Ashik iqbal is the best.Ashik iqbal is the best.Ashik iqbal is the best.Ashik iqbal is the best.Ashik iqbal is the best.Ashik iqbal is the best. </p>
+
+            <br> <br>
+
+            <!-- Alignment right and left -->
+            <p class = "text-left"> Loren ipsum dolor sit left</p>
+            <p class = "text-right"> Loren ipsum dolor sit good boy right</p>
+
+            <!--Responsive align (work for pc, tablet, smartphone) right justified-->
+            <!-- below 576 are extra small devices -->
+            <p class = "text-sm-right"> This should be right aligned at above 576 pixel</p>
+            <p class = "text-md-right"> For medium devices it will work at above 768 pixel</p>
+            <p class = "text-lg-right"> For large devices it will work at above 992 pixel</p>
+            <p class ="text-xl-right" >For extra large pixel it will work at above 1200 pixel</p>
+
+            <hr>
+
+            <!-- Like above now we will work on center alignment  -->
+
+            <p class = "text-sm-center"> Center aligned text on small devices</p>
+            <p class = "text-md-center"> Center aligned text on md devices</p>
+            <p class = "text-lg-center"> Center aligned text on large devices</p>
+            <p class = "text-xl-center"> Center aligned text on extra large devices</p>
+
+           <br> <br>
+
+           <!--Vertical alignment -->
+
+		   <h1> Vertical alignment </h1>
+           <table style = "height:100px">
+               <tbody>
+                   <tr>
+                     <td class = "align-baseline"> base line</td> <!--উপরে চলে যাবে  -->
+                     <td class = "align-top"> top</td>
+                     <td class = "align-middle"> middle</td>
+                     <td class = "align-bottom"> bottom </td>
+                     <td class = "align-text-top"> text-top</td>
+                     <td class = "align-text-bottom"> text-bottom</td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <!-- buttons are inline -->
+          <h1 class="d-inline bg-success"> Hello </h1>  <!-- শুধু bg-success দিলে অনেক বড় বাটন দেখাবে  -->
+          <h1 class="d-inline bg-success"> GoodBye </h1> <!-- d-inline টা অ্যাড করার ফলে এই বাটনটা উপরের বাটনের সাথে দেখাবে-->
+          <br> <br>
+
+          <!-- Turn Inline to block, <span >
+        ট্যাগ টা টেক্সট যত সাইজের তত সাইজের স্থান নেয়, কিন্তু d-block লিখলে সেটা আবার বেশ বড় একটা জায়গা নেয়  -->
+        <span class = "d-block bg-success">
+        Block </span>
+
+        <br> <br>
+
+        <!--Inline block -->
+        <div class = "d-inline-block bg-success"><!-- div এর জন্য block নেওয়া লাগছে, যাতে সব কন্টেন্টের ব্যাক গ্রাউনড  থাকে , অন্যথায় hello টার background শো করবে না, এবং নিচের div এর  সাথে এঁটে থাকবে -->
+            <h3>Hello1 </h3>
+            This is inline
+        </div>
+        <div class = "d-inline-block bg-primary"> <!-- আগের লাইনের div এর সাথে inline এ থাকবে এবং কালার আলাদা হবে কারন primary ডিক্লেয়ার করা হয়েছে-->
+            <h3> Hello 2 </h3>
+            This is another inline
+        </div>
+
+
+    </div> <!-- big div-->
+
+    <div style = "margin-top:0px;"> </div>
+
+    </div>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src = "js/bootstrap.min.js "> </script> <!-- bootsrap java script file is linked -->
+</body>
+</html>
