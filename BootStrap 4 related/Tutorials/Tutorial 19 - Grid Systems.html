@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Grid Systems| Bootstrap 4</title>
+	
+	
+</head>
+	<body>
+		<h1 class="display-3 text-center my-4">Grid System</h1>
+		
+		<!-- কিভাবে গ্রিড তৈরি করতে হয়, প্রত্যেক টাইপের ডিভাইসের জন্য গ্রিড শো করানো  -->
+		
+		<div class="container">
+		
+			<!-- Auto Layout columns -->
+			<h1> Auto layout columns</h1>
+			<div class = "row">
+				<div class= "col">
+					<h3> Ashik </h3>
+					<p>
+						A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
+					</p>
+				</div>
+				<!-- Another div-->
+				<!-- যতগুলাই div রাখি না কেন যদি col ক্লাস ইউজ করি দেন সব div content ইনলাইনে কলাম আকারে শো করবে  -->
+				<div class= "col">
+					<h3> Iqbal </h3>
+					<p>
+						A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
+					</p>
+				</div>
+				
+			</div> <!-- div class = "row" -->
+			<br>
+			
+			<!--Responsive column classes --> 
+			<!-- বিভিন্ন সাইজের ডিভাইসের জন্য col ক্লাসটার কাজ দেখাবো --> 
+			<h1>Responsive column classes </h1>
+			<div class = "row">
+				<div class= "col-6"> <!-- col-12 মানে এই div পুরো ব্লকের  ১০০% জায়গা দখল করবে , col-6 = 50%, col-4 = 33%, col-2 = 16.5%, Suppose আমি col-4 করে নিলাম তাহলে পুরো ব্লক ভরতে আমার তিনটা col-4 এর গ্রিড লাগবে, [যদি কলাম সমূহের দৈর্ঘ্য ১২ এর বেশি হয় তাহলে যেগুলোর জন্য কলামের দৈর্ঘ্য ১২ এর বেশি হচ্ছে সেগুলো নিচে চলে যাবে], যদি শুধু col ইউজ করা হয় তাহলে বাই- ডিফল্ট লেন্থ ক্যালকুলেট  করে সব গ্রিড এক লাইনে দেখাবে  -->
+						<h3> Iqbal1 </h3>
+						<p>
+							A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
+						</p>
+					
+			    </div>
+				<div class= "col-4">
+						<h3> Iqbal2 </h3>
+						<p>
+							A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
+						</p>
+				</div>
+			
+				<div class= "col-4"> 
+						<h3> Iqbal3 </h3>
+						<p>
+							A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
+						</p>
+					</div>
+			    </div> <!-- div class = "row" -->
+				<br>
+				
+				<!-- এবার আমরা ঠিক উপরের গ্রিডগুলো ফলো করে  রেস্পন্সিভ গ্রিড ডিজাইন দেখাবো  
+				small >=576, ,medium >= 768, large>= 992 , extra large >= 1200 -->
+				<!-- extra small ডিভাইসগুলোতে  একটা লাইনে একটা কলাম শো করাব, তাই col-12 ইউজ করব -->
+				<h2> Responsive grid design </h2>
+				<div class = "row">
+					<!-- নিচে সব column div এ -->
+					<div class= "col-12 col-sm-3 col-md-4 col-lg-4 col-xl-6">  <!-- col-sm = for small device, md= medium, lg = large, xl = extra large device-->
+							<h3> Iqbal 1 </h3>
+							<p>
+								A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
+							</p>
+						
+					</div>
+					<div class= "col-12 col-sm-3 col-md-4 col-lg-6 col-xl-3">
+						 	<h3> Iqbal 2</h3>
+							<p>
+								A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
+							</p>
+					</div>
+			
+					<div class= "col-12 col-sm-6 col-md-4 col-lg-2 col-xl-3"> 
+							<h3> Iqbal 3 </h3>
+							<p>
+								A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
+							</p>
+						</div>
+					</div> <!-- div class = "row" -->
+					<br>
+
+            <!--Nesting Grid -->
+			<!-- আমরা এখানে গ্রিডের মধ্যে গ্রিড দেখাবো , তার জন্য গ্রিডের মধ্যে কার্ড ইউজ করব -->
+			<h1> Nesting Grid</h1>
+			<div class = "row"> 
+			  <div class = "col">
+				<div class = "card">
+					<div class = "card-body">
+						<h5>Ashik 1 </h5>
+						<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. 1		</p>
+						<!-- Now nested grid starts -->
+						<!-- 2nd div card -->
+						<div class = "row">
+							<div class = "col mt-2"> <!-- extra small ডিভাইস এ উপরে মার্জিন রাখব , এটি এবং নিচের div col এ  -->
+								<div class = "card">
+									<div class = "card-body">
+										<h5>Ashik 2 </h5>
+										<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. 2	</p>
+									</div> <!-- 2nd card-body -->
+								</div> <!--2nd div card -->
+							</div>
+						
+						<!--3rd div card -->
+							<div class = "col mt-2">
+								<div class = "card">
+									<div class = "card-body">
+										<h 5>Ashik 3 </h5>
+										<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. 3		</p>
+									</div> <!-- 3rd card-body -->
+								</div> <!-- 3rd div card -->
+							</div>
+						
+						</div> <!-- same row এর অন্তর্গত তাই same row div এর মধ্যে থাকবে -->
+						
+					</div> <!-- 1st card-body-->
+					
+					
+					
+				</div> <!-- ১ম div card -->
+			  </div> <!-- col -->
+			</div> <!-- row -->
+			<br>
+			
+			<!--Offsetting columns -->
+			<h3>Offsetting columns </h3>
+			<!-- অনেক সময় একটা গ্রিডকে তার ডিফল্ট জায়গায় না রেখে সরিয়ে ডানপাশে অন্য জায়গায় সেট করা হয়, একে offset বলে  -->
+			<!-- ব্যাখ্যা -> তিনটা col নিলে সেটা পাশাপাশি ৪ করে লেন্থ নিয়ে বসবে , কিন্তু আমি দুইটা col-4 নিলাম , তারমানে একটা col-4 এর জায়গা ফাকা থাকবে , যেকোনো একটা col-4 কে সরিয়ে ফাকা জায়গায় দেয়াটাই হল offset  -->
+			<h1>Offset </h1>
+			<div class = "row">
+				<div class = "col-4">
+					<h5>Ashik1 </h5>
+					<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. 3		</p>
+				</div>
+				
+				<div class = "col-4 offset-4"> <!-- এই div এর কন্টেন্ট থার্ড কলামে বসবে, যদি offset-8 দিতাম তাহলে পরের সারিতে একেবারে শেষের কলামে বসবে  -->
+				<!-- যদি কোন কলাম offset হয়ে ১২ ক্রস করে ফেলে তাহলে পরের সারিতে যাবে, এবং অই সারিতে পরের অফসেট ক্যালকুলেট হবে   -->
+					<h5>Ashik2 </h5>
+					<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. 3		</p>
+				</div>
+			</div>
+			<br>
+			<!-- Responsive Offset -->
+			<h1>Responsive offset </h1>
+			<div class = "row">
+				<div class = "col-3 offset-md-3"> <!-- মিডিয়াম ডিভাইসের জন্য ১ম div এর কন্টেন্ট ডানে ৩লেন পরিমান সরে যাবে  -->
+					<h5>Ashik1 </h5>
+					<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. 3		</p>
+				</div>
+				
+				<div class = "col-3 offset-3 offset-sm-6 offset-md-3"> 
+					<h5>Ashik2 </h5>
+					<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. 3		</p>
+				</div>
+			</div> <!-- div row -->
+			<br>
+			
+			<!-- Reordering-->
+			<!-- একটা row এর আন্ডারে যত কলাম আছে সবগুলোকে নির্দিষ্ট ক্রমে সাজানোকে বলা হয় Reordering, কলামগুলোর পাশে অর্ডার নাম্বার দেওয়া থাকে , সেই অনুসারে এক লাইনে highest 12 টা কলাম বসান যায় -->
+			
+			<div class = "row">
+				<div class = "col order-3"> <!-- order এর ক্রম যত হবে তত পজিশনে এই কলামটা থাকবে  -->
+					<h3> First column</h3>
+					<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of.	</p>
+				</div>
+				
+				<div class = "col order-4"> 
+					<h3> Second column</h3>
+					<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of.	</p>
+				</div>
+				
+				<div class = "col order-2"> 
+					<h3> Third column</h3>
+					<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of.	</p>
+				</div>
+				
+				<div class = "col order-1"> 
+					<h3> Fourth column</h3>
+					<p> A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a self-contained unit of.	</p>
+				</div>
+			</div><!-- div row -->
+			
+				
+		</div> <!-- div class = "container" -->
+		
+		<!--এখানে যে সিকোয়েন্সে <script> ট্যাগ গুলা আছে সেইভাবেই দিতে হবে  -->
+		 <div style="margin-top:500px;"></div>
+		 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		 <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
