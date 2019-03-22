@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <title>Profile</title>
+</head>
+<body>
+
+  <div class="container">
+
+     <div class = "row">
+
+       <div class= "col-8 offset-2">
+
+            <h1 class= "display-3 text-center mt-5"> Profile</h1>
+			<hr>
+			<div class ="row">
+
+				<div class="col-8">
+
+					<h3> <strong>Username: </strong> <span class ="ml-30 text-muted"  >Ashik53 </span></h3>
+					<h3> <strong>Role: </strong> <span class ="ml-30 text-muted" > Programmer </span></h3>
+					<h3> <strong>Email: </strong> <span class ="ml-20 text-muted" >ashik53@gmail.com </span></h3>
+
+
+          <!--modal -->
+
+                    <!-- LOGIN MODAL -->
+              <!-- একটা বাটনে ক্লিক করলে log in window আসবে , সেইরকম একটা window তৈরি করবো-->
+          	<!-- এখানে modal body এর মধ্যে একটা login form তৈরি করবো , footer এর  মধ্যে ডানসাইডে দুইটা বাটন থাকে , ১মটা লগিন এবং ২য়টা ক্লোজ বাটন -->
+
+          	<!-- যে বাটনে ক্লিক করা হবে -->
+            <br>
+          	<button class = "btn btn-success btn-lg" data-toggle ="modal" data-target ="#loginModal"> Change Password</button>
+          	<!-- যে div এরিয়াতে modal থাকবে -->
+          	<div class = "modal" id ="loginModal">
+          	  <div class = "modal-dialog modal-lg">
+          		<div class = "modal-content">
+          		  <div class = "modal-header">
+          			<h5 class = "modal-title">Change password</h5>
+          		  </div> <!-- modal header-->
+          			<!-- এইবার modal-body বানাবো, যেখানে আমি একটা login window বানাবো -->
+
+          			<div class = "modal-body">
+          				<form>
+          					<!-- username -->
+          					<div class = "form-group">
+          						<label for = "old_password">Old Password</label>
+          						<input class = "form-control" type="password">
+          					</div>
+          					<!-- password -->
+          					<div class = "form-group">
+          						<label for = "password">New Password</label>
+          						<input class = "form-control" type="password">
+          					</div>
+          				</form>
+          			</div> <!-- div = modal-body -->
+
+          			<!-- এবার footer নিয়ে কাজ করবো  -->
+          			<div class = "modal-footer">
+          			  <button class = "btn btn-secondary " data-dismiss="modal" > <!-- ক্লোজ বাটন  -->
+          			  Cancel</button>
+          			  <button class = "btn btn-warning"> <!-- Login button --> Send
+          			  </button>
+          			</div> <!-- modal-footer -->
+
+          		</div> <!-- modal-content -->
+          	  </div> <!--modal-dialog -->
+
+          	</div> <!--modal -->
+
+				</div> <!-- col -->
+
+				<div class ="col-4">
+					<img src="img/image5.jpg" class="img-fluid rounded" alt="Smiley face" style = "width:130px;height:130px">
+				</div>
+
+			</div> <!--- row -->
+
+
+
+            <hr>
+
+            <p class= "text-center">Copyright Ashik - All Rights Reserved </p>
+
+      </div> <!-- col -->
+
+    </div> <!-- row-->
+
+
+
+  </div> <!--container -->
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+
+  </script>
+
+
+</body>
+</html>
