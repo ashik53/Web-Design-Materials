@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <title>Single Project</title>
+  <title>Individual Project Page</title>
 </head>
 <body>
 
@@ -18,7 +18,59 @@
 
           <br>
 
-          <button class = "btn btn-primary btn-block">Create Task  </button>
+          <button class ="btn btn-primary btn-block" data-toggle ="modal" data-target="#addTask"> Create Task</button>
+
+          <!-- task create modal starts-->
+          <div class ="modal" id ="addTask">
+            <div class="modal-dialog modal-lg">
+              <div class ="modal-content">
+                <div class = "modal-header">
+                  <h5> Create a new Task</h5>
+                </div> <!-- modal header-->
+                <div class="modal-body">
+                  <form> <!-- -->
+
+                    <div class ="form-group">
+                      <label for="file" class ="font-weight-bold"> Task file:  </label>
+                      <input class ="form-control-file" type="file" name="file">
+                      <small class ="form-text text-muted" > Max 3 MB size </small>
+                    </div>
+
+                    <div class ="form-group">
+                      <label for="task_description" class ="font-weight-bold">Description: </label>
+                      <textarea class="form-control" rows="4"> </textarea>
+                    </div>
+
+                    <div class ="form-group">
+                      <label for="assigned_to" class ="font-weight-bold">Assigned to: </label>
+                      <input class="form-control" type="text" name="assigned_to">
+                    </div>
+
+                    <div class ="form-group">
+                      <label for="role" class ="font-weight-bold" >Role: </label>
+                      <input class="form-control" type="text" name="role">
+                    </div>
+
+                    <div class ="form-group">
+                      <label for="finished_date" class ="font-weight-bold">Assigned date: </label>
+                      <input class="form-control" type="text" name="finished_date ">
+                    </div>
+
+                    <hr>
+
+                    <div class="float-right">
+                      <button class="btn btn-secondary" data-dismiss="modal"> Close</button>
+            			    <button class = "btn btn-warning" type="submit"> Submit Task</button>
+                    </div>
+
+                  </form> <!-- task create form -->
+                </div> <!-- modal body-->
+              </div> <!--- modal content-->
+            </div> <!-- modal-dialog modal-lg -->
+          </div> <!-- modal-->
+          <!-- task create modal is finished-->
+          <!--modal start -->
+          <!-- modal end -->
 
           <br>
 
@@ -53,6 +105,9 @@
                     <p style ="margin-left:160px" class ="font-weight-bold">  Assigned date: </p>
                     <p style ="margin-left:160px" class ="font-weight-bold" >  Expected finished date: </p>
                   </div><!--col  -->
+
+
+
                 </div> <!-- row-->
                 <h4 class ="text-center "> Status :   <a class ="text-danger"> Rejected </a></h4>
                 <hr>
